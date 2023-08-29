@@ -399,10 +399,10 @@ vendor/lib64/soundfx/libvolumelistener.so
 # vendor/etc/usb_audio_policy_configuration.xml
 
 # Automotive
-# vendor/lib/vendor.qti.hardware.automotive.vehicle@1.0.so
-# vendor/lib64/vendor.qti.hardware.automotive.vehicle@1.0.so
-# vendor/lib/libqti_vndfwk_detect_vendor.so
-# vendor/lib64/libqti_vndfwk_detect_vendor.so
+vendor/lib/vendor.qti.hardware.automotive.vehicle@1.0.so
+vendor/lib64/vendor.qti.hardware.automotive.vehicle@1.0.so
+vendor/lib/libqti_vndfwk_detect_vendor.so
+vendor/lib64/libqti_vndfwk_detect_vendor.so
 
 # Batterysecret
 vendor/bin/batterysecret
@@ -490,26 +490,20 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 vendor/lib64/vendor.qti.hardware.bttpi-V2-ndk.so
 
 # Boot
-
 # vendor/bin/hw/android.hardware.boot@1.2-service
 # vendor/etc/init/android.hardware.boot@1.2-service.rc
 # vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
 # odm/lib/camera/components/libstats.pdlib.so
 
-
-
-
-
-# odm/lib64/libalAILDC.so
-# odm/lib64/libalLDC.so
-# odm/lib64/libanc_supervq.so
+odm/lib64/libalLDC.so
+odm/lib64/libanc_supervq.so
 # system_ext/lib/vendor.qti.hardware.seccam@1.0.so
 # system_ext/lib64/vendor.qti.hardware.seccam@1.0.so
 # vendor/lib/libgralloc.qti.so
-# vendor/lib/libqti_vndfwk_detect.so
+vendor/lib/libqti_vndfwk_detect.so
 # vendor/lib/vendor.qti.hardware.display.config-V2-ndk.so
 # vendor/lib64/libgralloc.qti.so
-# vendor/lib64/libqti_vndfwk_detect.so
+vendor/lib64/libqti_vndfwk_detect.so
 # vendor/lib64/vendor.qti.hardware.camera.aon@1.0.so
 # vendor/lib64/vendor.qti.hardware.camera.aon@1.1.so
 # vendor/lib64/vendor.qti.hardware.camera.aon@1.2.so
@@ -2393,7 +2387,7 @@ vendor/lib64/libllvm-qgl.so
 vendor/lib/hw/vulkan.adreno.so
 vendor/lib64/hw/vulkan.adreno.so
 
-# Graphics (Fuxi, Adreno)
+# Graphics (Socrates, Adreno)
 odm/firmware/a740_zap.b00
 odm/firmware/a740_zap.b01
 odm/firmware/a740_zap.b02
@@ -3824,7 +3818,7 @@ odm/etc/thermal-video.conf
 odm/etc/thermal-videochat.conf
 
 # Thermal engine
-vendor/vendor/lib/sensors.toucbin/mi_thermald
+vendor/bin/mi_thermald
 vendor/bin/thermal-engine-v2
 vendor/etc/init/hw/init.mi_thermald.rc
 vendor/etc/init/init_thermal-engine-v2.rc
@@ -3835,8 +3829,6 @@ vendor/bin/time_daemon
 vendor/etc/init/init.time_daemon.rc
 vendor/lib/libtime_genoff.so
 vendor/lib64/libtime_genoff.so
-
-# Touchscreen (fuxi)
 
 # Touch Feature
 odm/bin/hw/vendor.xiaomi.hw.touchfeature@1.0-service
@@ -4936,11 +4928,6 @@ odm/bin/toucheventcheck
 # odm/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.miriskmanager.xml
 # odm/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.otrpagent@2.0.xml
 # odm/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.vsimapp.xml
-# odm/etc/vintf/manifest_fuxi.xml
-# odm/etc/vintf/manifest_ishtar.xml
-# odm/etc/vintf/manifest_nuwa.xml
-odm/etc/vintf/manifest_socrates.xml
-# odm/etc/vintf/manifest_wangshu.xml
 # odm/etc/UserDefinedMi.udm
 # odm/etc/XiaoAiNiZaiNa.uim
 # odm/etc/XiaoAiNiZaiNaMi.udm
