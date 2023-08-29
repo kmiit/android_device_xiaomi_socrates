@@ -1,4 +1,0 @@
-runtime_resource_overlay {
-    name: "SystemUIResOverlaySocrates",
-    product_specific: true
-}
