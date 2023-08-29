@@ -1,0 +1,13 @@
+//
+// Copyright (C) 2023 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+soong_namespace {
+    imports: [
+        "hardware/qcom-caf/bootctrl",
+        "hardware/xiaomi",
+        "vendor/qcom/opensource/commonsys-intf/display",
+    ],
+}

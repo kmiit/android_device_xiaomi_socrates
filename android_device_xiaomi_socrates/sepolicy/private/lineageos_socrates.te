@@ -1,0 +1,10 @@
+# flags_health_check
+allow flags_health_check properties_device:file { open getattr map };
+allow flags_health_check properties_device:dir { open getattr map };
+
+# system app
+allow system_app proc_pagetypeinfo:file { read open getattr };
+
+# kernel
+type kernel_module, domain;
+allow kernel_module kernel:capability { dac_read_search };
