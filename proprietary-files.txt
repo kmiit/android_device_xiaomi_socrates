@@ -1363,23 +1363,21 @@ odm/firmware/CAMERA_ICP.b20
 odm/firmware/CAMERA_ICP.elf
 odm/firmware/CAMERA_ICP.mbn
 odm/firmware/CAMERA_ICP.mdt
-###
-# Camera configs
-# odm/etc/camera/mi_tuning/default.bin
-# odm/etc/camera/mi_tuning/socrates_semco_imx800_wide.bin
-# odm/etc/camera/CFR_para_UW_V01_HD.bin
-# odm/etc/camera/CFR_para_UW_V01_HDR.bin
-# odm/etc/camera/CFR_para_UW_V01_SN.bin
-# odm/etc/camera/altekldc_packdata_0x01.bin
-# odm/etc/camera/altekldc_segmodel.bin
-# odm/etc/camera/altekldc_tuningdata.bin
-# odm/etc/camera/altekldc_tuningdata_ai.bin
-# odm/etc/camera/anc_1080p.bin
-# odm/etc/camera/anc_4k.bin
-# odm/etc/camera/dlengine.dlc
-# odm/etc/camera/svq_cache
-# vendor/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/2_SkinSmoothRear/effect.json
-###
+
+odm/etc/camera/mi_tuning/default.bin
+odm/etc/camera/mi_tuning/socrates_semco_imx800_wide.bin
+odm/etc/camera/CFR_para_UW_V01_HD.bin
+odm/etc/camera/CFR_para_UW_V01_HDR.bin
+odm/etc/camera/CFR_para_UW_V01_SN.bin
+odm/etc/camera/altekldc_packdata_0x01.bin
+odm/etc/camera/altekldc_segmodel.bin
+odm/etc/camera/altekldc_tuningdata.bin
+odm/etc/camera/altekldc_tuningdata_ai.bin
+odm/etc/camera/anc_1080p.bin
+odm/etc/camera/anc_4k.bin
+odm/etc/camera/dlengine.dlc
+odm/etc/camera/svq_cache
+vendor/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/2_SkinSmoothRear/effect.json
 
 ###
 # CAS
@@ -3730,7 +3728,7 @@ odm/etc/sensors/config/sm8550_qmc6308_0.json
 odm/etc/sensors/config/sm8550_stk3bcx_0.json
 odm/etc/sensors/config/sm8550_tsl2522_0.json
 odm/etc/sensors/config/stk3bcx_0.json
-vendor/etc/sensors/hals.conf
+# vendor/etc/sensors/hals.conf
 ###
 
 ###
