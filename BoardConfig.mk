@@ -52,12 +52,9 @@ TARGET_USES_UEFI := true
 # Display
 TARGET_SCREEN_DENSITY := 440
 
-# DTB
-# BOARD_USES_DT := true
-# BOARD_PREBUILT_DTBIMAGE_DIR := $(KERNEL_PATH)/dtbs
-
-PRODUCT_COPY_FILES += \
-    $(KERNEL_PATH)/dtb:dtb.img
+# DTB and DTBO
+BOARD_USES_DT := true
+BOARD_PREBUILT_DTBIMAGE_DIR := $(KERNEL_PATH)/dtbs
 BOARD_PREBUILT_DTBOIMAGE := $(KERNEL_PATH)/dtbo.img
 
 # Filesystem
@@ -108,25 +105,6 @@ TARGET_KERNEL_VERSION := 5.15
 LOCAL_KERNEL := $(KERNEL_PATH)/Image
 PRODUCT_COPY_FILES += \
 	$(LOCAL_KERNEL):kernel
-
-# # Kernel Modules
-# BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(KERNEL_PATH)/vendor_ramdisk/modules.load))
-# BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(addprefix $(KERNEL_PATH)/vendor_ramdisk/, $(BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD))
-# BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(KERNEL_PATH)/vendor_ramdisk/modules.blocklist
-
-# # Also add recovery modules to vendor ramdisk
-# BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(KERNEL_PATH)/vendor_ramdisk/modules.load.recovery))
-# RECOVERY_MODULES := $(addprefix $(KERNEL_PATH)/vendor_ramdisk/, $(BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD))
-
-# # Prevent duplicated entries (to solve duplicated build rules problem)
-# BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(sort $(BOARD_VENDOR_RAMDISK_KERNEL_MODULES) $(RECOVERY_MODULES))
-
-# # Vendor modules (installed to vendor_dlkm)
-# BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(KERNEL_PATH)/vendor_dlkm/modules.load))
-# BOARD_VENDOR_KERNEL_MODULES := $(addprefix $(KERNEL_PATH)/vendor_dlkm/, $(BOARD_VENDOR_KERNEL_MODULES_LOAD))
-# BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE :=  $(KERNEL_PATH)/vendor_dlkm/modules.blocklist
-
-
 
 # Kernel modules
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(KERNEL_PATH)/vendor_dlkm/modules.load))
