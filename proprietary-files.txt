@@ -3888,12 +3888,6 @@ vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 # system_ext/lib64/vendor.qti.hardware.tui_comm@1.0.so
 # vendor/lib/vendor.qti.hardware.systemhelper@1.0.so
 # vendor/lib64/vendor.qti.hardware.systemhelper@1.0.so
-# vendor/bin/hw/android.hardware.usb.gadget@1.1-service-qti
-# vendor/bin/hw/android.hardware.usb@1.2-service-qti
-# vendor/etc/init/android.hardware.usb.gadget@1.1-service-qti.rc
-# vendor/etc/init/android.hardware.usb@1.2-service-qti.rc
-# vendor/etc/vintf/manifest/android.hardware.usb.gadget@1.1-service.xml
-# vendor/etc/vintf/manifest/android.hardware.usb@1.2-service.xml
 # odm/bin/hw/vendor.xiaomi.hardware.vibratorfeature.service
 # odm/etc/init/vendor.xiaomi.hardware.vibratorfeature.service.rc
 # odm/etc/vintf/manifest/vendor.xiaomi.hardware.vibratorfeature.service.xml

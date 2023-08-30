@@ -261,27 +261,6 @@ PRODUCT_PACKAGES += \
     init.qti.media.rc \
     init.qti.media.sh
 
-# PRODUCT_COPY_FILES += \
-#     $(LOCAL_PATH)/audio/codecs/media_codecs_c2_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2_audio.xml \
-#     $(LOCAL_PATH)/audio/codecs/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml \
-#     $(LOCAL_PATH)/audio/codecs/media_codecs_kalama_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_kalama_vendor.xml \
-#     $(LOCAL_PATH)/audio/codecs/media_codecs_kalama.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_kalama.xm \
-#     $(LOCAL_PATH)/audio/codecs/media_codecs_no_dolbyencoder_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_no_dolbyencoder_vendor.xml \
-#     $(LOCAL_PATH)/audio/codecs/media_codecs_performance_kalama_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_kalama_vendor.xml \
-#     $(LOCAL_PATH)/audio/codecs/media_codecs_performance_kalama.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_kalama.xml \
-#     $(LOCAL_PATH)/audio/codecs/media_codecs_vendor_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_vendor_audio.xml \
-#     $(LOCAL_PATH)/audio/codecs/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
-#     $(LOCAL_PATH)/audio/codecs/media_profiles_kalama.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_kalama.xml \
-#     $(LOCAL_PATH)/audio/codecs/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \
-#     $(LOCAL_PATH)/audio/codecs/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml \
-#     $(LOCAL_PATH)/audio/codecs/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
-#     $(LOCAL_PATH)/audio/codecs/media_codecs_google_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2.xml \
-#     $(LOCAL_PATH)/audio/codecs/media_codecs_google_c2_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2_audio.xml \
-#     $(LOCAL_PATH)/audio/codecs/media_codecs_google_c2_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2_video.xml \
-#     $(LOCAL_PATH)/audio/codecs/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_telephony.xml \
-#     $(LOCAL_PATH)/audio/codecs/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml \
-#     $(LOCAL_PATH)/audio/codecs/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml
-
 # Minijail
 PRODUCT_PACKAGES += \
     libavservices_minijail.vendor
@@ -459,7 +438,7 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb.gadget@1.1-service-qti \
+    android.hardware.usb.gadget@1.2-service-qti \
     android.hardware.usb@1.3-service-qti
 
 PRODUCT_COPY_FILES += \
