@@ -309,19 +309,19 @@ odm/firmware/cs35l41-dsp1-spk-prot.wmfw
 
 # Audio FX modules
 ###
-# system_ext/lib/soundfx/libozoprocessing.so
-# system_ext/lib/libav_ozoencoder.so
-# system_ext/lib/libozoaudio.so
-# system_ext/lib64/soundfx/libozoprocessing.so
-# system_ext/lib64/libav_ozoencoder.so
-# system_ext/lib64/libozoaudio.so
-# vendor/lib/soundfx/libdynproc.so
-# vendor/lib/soundfx/libhapticgenerator.so
-# vendor/lib/libmisoundsa.so
+system_ext/lib/soundfx/libozoprocessing.so
+system_ext/lib/libav_ozoencoder.so
+system_ext/lib/libozoaudio.so
+system_ext/lib64/soundfx/libozoprocessing.so
+system_ext/lib64/libav_ozoencoder.so
+system_ext/lib64/libozoaudio.so
+vendor/lib/soundfx/libdynproc.so
+vendor/lib/soundfx/libhapticgenerator.so
+vendor/lib/libmisoundsa.so
 # vendor/lib/libvibrator.so
-# vendor/lib64/soundfx/libdynproc.so
-# vendor/lib64/soundfx/libhapticgenerator.so
-# vendor/lib64/libmisoundsa.so
+vendor/lib64/soundfx/libdynproc.so
+vendor/lib64/soundfx/libhapticgenerator.so
+vendor/lib64/libmisoundsa.so
 # vendor/lib64/libvibrator.so
 # 
 ###
@@ -355,15 +355,15 @@ vendor/lib64/soundfx/libswvqe.so
 vendor/lib64/soundfx/libvolumelistener.so
 
 # Audio configs
-# system/etc/audio_effects.conf
-# odm/etc/audio/sku_kalama/mixer_paths_kalama_mtp.xml
-# odm/etc/audio/sku_kalama/mixer_paths_overlay_dynamic.xml
-# odm/etc/audio/sku_kalama/mixer_paths_overlay_static.xml
-# odm/etc/audio/sku_kalama/resourcemanager_kalama_mtp.xml
+system/etc/audio_effects.conf
+odm/etc/audio/sku_kalama/mixer_paths_kalama_mtp.xml
+odm/etc/audio/sku_kalama/mixer_paths_overlay_dynamic.xml
+odm/etc/audio/sku_kalama/mixer_paths_overlay_static.xml
+odm/etc/audio/sku_kalama/resourcemanager_kalama_mtp.xml
 # odm/etc/audio/RES1K.wav
 # odm/etc/audio/bottom_spk.wav
 # odm/etc/audio/bottom_spk_hp.wav
-# odm/etc/audio/hrtf5c.bin
+odm/etc/audio/hrtf5c.bin
 # odm/etc/audio/rcv.wav
 # odm/etc/audio/rcv_hp.wav
 # odm/etc/audio/rcv_seal.wav
@@ -371,32 +371,32 @@ vendor/lib64/soundfx/libvolumelistener.so
 # odm/etc/audio/test.wav
 # odm/etc/audio/top_spk.wav
 # odm/etc/audio/top_spk_hp.wav
-# odm/etc/audio_policy_engine_configuration_mi.xml
-# odm/etc/audio_policy_engine_default_stream_volumes.xml
-# odm/etc/audio_policy_engine_product_strategies.xml
-# odm/etc/audio_policy_engine_stream_volumes.xml
-# vendor/etc/audio/sku_kalama/adsp_sleep_monitor.conf
-# vendor/etc/audio/sku_kalama/audio_effects.conf
-# vendor/etc/audio/sku_kalama/audio_effects.xml
-# vendor/etc/audio/sku_kalama/audio_policy_configuration.xml
-# vendor/etc/audio/sku_kalama/mixer_paths_kalama_cdp.xml
-# vendor/etc/audio/sku_kalama/mixer_paths_kalama_cdp_wsa883x.xml
-# vendor/etc/audio/sku_kalama/mixer_paths_kalama_grd.xml
-# vendor/etc/audio/sku_kalama/mixer_paths_kalama_mtp.xml
-# vendor/etc/audio/sku_kalama/mixer_paths_kalama_qrd.xml
-# vendor/etc/audio/sku_kalama/resourcemanager_kalama_cdp.xml
-# vendor/etc/audio/sku_kalama/resourcemanager_kalama_grd.xml
-# vendor/etc/audio/sku_kalama/resourcemanager_kalama_mtp.xml
-# vendor/etc/audio/sku_kalama/resourcemanager_kalama_qrd.xml
-# vendor/etc/audio/sku_kalama_qssi/audio_policy_configuration.xml
-# vendor/etc/a2dp_audio_policy_configuration.xml
-# vendor/etc/audio_policy_configuration.xml
-# vendor/etc/audio_policy_volumes.xml
-# vendor/etc/bluetooth_qti_audio_policy_configuration.xml
-# vendor/etc/bluetooth_qti_hearing_aid_audio_policy_configuration.xml
-# vendor/etc/default_volume_tables.xml
-# vendor/etc/r_submix_audio_policy_configuration.xml
-# vendor/etc/usb_audio_policy_configuration.xml
+odm/etc/audio_policy_engine_configuration_mi.xml
+odm/etc/audio_policy_engine_default_stream_volumes.xml
+odm/etc/audio_policy_engine_product_strategies.xml
+odm/etc/audio_policy_engine_stream_volumes.xml
+vendor/etc/audio/sku_kalama/adsp_sleep_monitor.conf
+vendor/etc/audio/sku_kalama/audio_effects.conf
+vendor/etc/audio/sku_kalama/audio_effects.xml
+vendor/etc/audio/sku_kalama/audio_policy_configuration.xml
+vendor/etc/audio/sku_kalama/mixer_paths_kalama_cdp.xml
+vendor/etc/audio/sku_kalama/mixer_paths_kalama_cdp_wsa883x.xml
+vendor/etc/audio/sku_kalama/mixer_paths_kalama_grd.xml
+vendor/etc/audio/sku_kalama/mixer_paths_kalama_mtp.xml
+vendor/etc/audio/sku_kalama/mixer_paths_kalama_qrd.xml
+vendor/etc/audio/sku_kalama/resourcemanager_kalama_cdp.xml
+vendor/etc/audio/sku_kalama/resourcemanager_kalama_grd.xml
+vendor/etc/audio/sku_kalama/resourcemanager_kalama_mtp.xml
+vendor/etc/audio/sku_kalama/resourcemanager_kalama_qrd.xml
+vendor/etc/audio/sku_kalama_qssi/audio_policy_configuration.xml
+vendor/etc/a2dp_audio_policy_configuration.xml
+vendor/etc/audio_policy_configuration.xml
+vendor/etc/audio_policy_volumes.xml
+vendor/etc/bluetooth_qti_audio_policy_configuration.xml
+vendor/etc/bluetooth_qti_hearing_aid_audio_policy_configuration.xml
+vendor/etc/default_volume_tables.xml
+vendor/etc/r_submix_audio_policy_configuration.xml
+vendor/etc/usb_audio_policy_configuration.xml
 
 # Automotive
 vendor/lib/vendor.qti.hardware.automotive.vehicle@1.0.so
@@ -2498,24 +2498,21 @@ vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0.so
 
 ###
 # Media (Dolby)
-# odm/etc/dolby/dax-default.xml
-# vendor/lib/libcodec2_hidl_plugin.so
-# vendor/lib64/libcodec2_hidl@1.1.so
-# vendor/lib64/libcodec2_hidl@1.2.so
+odm/etc/dolby/dax-default.xml
+vendor/lib/libcodec2_hidl_plugin.so
+vendor/lib64/libcodec2_hidl@1.1.so
+vendor/lib64/libcodec2_hidl@1.2.so
 
 # Media configs
-# vendor/etc/media_codecs_c2_audio.xml
-# vendor/etc/media_codecs_google_audio.xml
-# vendor/etc/media_codecs_google_c2.xml
-# vendor/etc/media_codecs_google_c2_audio.xml
-# vendor/etc/media_codecs_google_c2_video.xml
-# vendor/etc/media_codecs_google_telephony.xml
-# vendor/etc/media_codecs_google_video.xml
-# vendor/etc/media_codecs_google_video_le.xml
-# vendor/etc/media_codecs_vendor_audio.xml
-### 
-
-# Media
+vendor/etc/media_codecs_c2_audio.xml
+vendor/etc/media_codecs_google_audio.xml
+vendor/etc/media_codecs_google_c2.xml
+vendor/etc/media_codecs_google_c2_audio.xml
+vendor/etc/media_codecs_google_c2_video.xml
+vendor/etc/media_codecs_google_telephony.xml
+vendor/etc/media_codecs_google_video.xml
+vendor/etc/media_codecs_google_video_le.xml
+vendor/etc/media_codecs_vendor_audio.xml
 vendor/bin/hw/vendor.qti.media.c2@1.0-service
 vendor/bin/hw/vendor.qti.media.c2audio@1.0-service
 vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
@@ -4935,7 +4932,7 @@ odm/bin/toucheventcheck
 # odm/etc/XiaoAiTongXue.uim
 # odm/etc/XiaoAiTongXueMi.udm
 # odm/etc/audio-test-config
-# odm/etc/backend_conf.xml
+odm/etc/backend_conf.xml
 # odm/etc/default.lm
 # odm/etc/device_info_qr_config.yml
 # odm/etc/device_sar_config.xml
@@ -5057,12 +5054,12 @@ vendor/app/QFingerprintService/QFingerprintService.apk
 # vendor/etc/IPACM_Filter_cfg.xml
 # vendor/etc/UrlSign.xml
 # vendor/etc/audio_diag.cfg
-# vendor/etc/card-defs.xml
+vendor/etc/card-defs.xml
 # vendor/etc/excluded-input-devices.xml
-# vendor/etc/microphone_characteristics.xml
+vendor/etc/microphone_characteristics.xml
 # vendor/etc/mkshrc
 # vendor/etc/usb_compositions.conf
-# vendor/etc/usecaseKvManager.xml
+vendor/etc/usecaseKvManager.xml
 # vendor/lib/hw/vendor.xiaomi.hardware.cld@1.0-impl.so
 # vendor/lib/hw/vendor.xiaomi.hardware.fbo@1.0-impl.so
 # vendor/lib/hw/vendor.xiaomi.hardware.misys@1.0-impl.so
