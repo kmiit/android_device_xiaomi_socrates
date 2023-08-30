@@ -519,6 +519,7 @@ odm/lib/camera/fdconfigvideo.bin
 odm/lib/camera/fdconfigvideolite.bin
 odm/lib/libmialgo_utils.so
 odm/lib/libxmi_slow_motion_mein.so
+odm/lib64/libalAILDC.so
 odm/lib64/camera/com.qti.tuned.default.bin
 odm/lib64/camera/fdconfigpreview.bin
 odm/lib64/camera/fdconfigpreviewlite.bin
