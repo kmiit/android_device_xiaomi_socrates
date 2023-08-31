@@ -49,9 +49,6 @@ system_dlkm                                             /system_dlkm           e
 system_dlkm                                             /system_dlkm           ext4    ro,barrier=1,discard                                 wait,slotselect,avb=vbmeta,logical,first_stage_mount
 odm                                                     /odm                   erofs   ro                                                   wait,slotselect,avb=vbmeta,logical,first_stage_mount
 odm                                                     /odm                   ext4    ro,barrier=1,discard                                 wait,slotselect,avb=vbmeta,logical,first_stage_mount
-mi_ext                                                  /mnt/vendor/mi_ext     erofs   ro                                                   wait,slotselect,avb=vbmeta,logical,first_stage_mount,nofail
-mi_ext                                                  /mnt/vendor/mi_ext     ext4    ro,barrier=1,discard                                 wait,slotselect,avb=vbmeta,logical,first_stage_mount,nofail
-/mnt/vendor/mi_ext                                      /mi_ext                none    ro,bind                                              wait,nofail
 overlay                                                 /product/overlay          overlay ro,lowerdir=/mnt/vendor/mi_ext/product/overlay/:/product/overlay check,nofail
 overlay                                                 /product/app              overlay ro,lowerdir=/mnt/vendor/mi_ext/product/app/:/product/app check,nofail
 overlay                                                 /product/priv-app         overlay ro,lowerdir=/mnt/vendor/mi_ext/product/priv-app/:/product/priv-app check,nofail

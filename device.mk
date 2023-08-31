@@ -31,6 +31,18 @@ PRODUCT_SHIPPING_API_LEVEL := $(BOARD_API_LEVEL)
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
+# AIDL NDK backend
+PRODUCT_PACKAGES += \
+    android.hardware.common-V2-ndk_platform.vendor \
+    android.hardware.gnss-V1-ndk_platform.vendor \
+    android.hardware.identity-V3-ndk_platform.vendor \
+    android.hardware.keymaster-V3-ndk_platform.vendor \
+    android.hardware.light-V1-ndk_platform.vendor \
+    android.hardware.memtrack-V1-ndk_platform.vendor \
+    android.hardware.security.keymint-V1-ndk_platform.vendor \
+    android.hardware.security.secureclock-V1-ndk_platform.vendor \
+    android.hardware.security.sharedsecret-V1-ndk_platform.vendor
+
 # ANT+
 PRODUCT_PACKAGES += \
     com.dsi.ant@1.0.vendor
@@ -318,7 +330,8 @@ include $(LOCAL_PATH)/properties/default.mk
 
 # Perf
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.perf@2.3.vendor
+    vendor.qti.hardware.perf@2.3.vendor \
+    vendor.qti.hardware.perf@2.3
 
 # Power
 PRODUCT_PACKAGES += \
@@ -380,7 +393,8 @@ PRODUCT_COPY_FILES += \
 
 # Sensors
  PRODUCT_PACKAGES += \
-     sensors.xiaomi 
+     sensors.xiaomi \
+     sensors.udfps
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
