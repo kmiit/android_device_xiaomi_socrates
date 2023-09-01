@@ -493,12 +493,9 @@ vendor/lib64/vendor.qti.hardware.bttpi-V2-ndk.so
 # vendor/bin/hw/android.hardware.boot@1.2-service
 # vendor/etc/init/android.hardware.boot@1.2-service.rc
 # vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
-# odm/lib/camera/components/libstats.pdlib.so
 
 odm/lib64/libalLDC.so
 odm/lib64/libanc_supervq.so
-# system_ext/lib/vendor.qti.hardware.seccam@1.0.so
-# system_ext/lib64/vendor.qti.hardware.seccam@1.0.so
 # vendor/lib/libgralloc.qti.so
 vendor/lib/libqti_vndfwk_detect.so
 # vendor/lib/vendor.qti.hardware.display.config-V2-ndk.so
@@ -512,6 +509,9 @@ vendor/lib64/libqti_vndfwk_detect.so
 # vendor/lib64/vendor.qti.hardware.display.config-V2-ndk.so
 
 # Camera
+system_ext/lib/vendor.qti.hardware.seccam@1.0.so
+system_ext/lib64/vendor.qti.hardware.seccam@1.0.so
+odm/lib/camera/components/libstats.pdlib.so
 odm/lib/camera/com.qti.tuned.default.bin
 odm/lib/camera/fdconfigpreview.bin
 odm/lib/camera/fdconfigpreviewlite.bin
@@ -3619,6 +3619,8 @@ vendor/lib64/vendor.qti.imsrtpservice@3.1.so
 system/etc/vintf/manifest/secure_element-service.xml
 system/lib/android.hardware.secure_element@1.0.so
 system/lib64/android.hardware.secure_element@1.0.so
+vendor/lib/android.hardware.secure_element@1.0-impl.so
+vendor/lib64/android.hardware.secure_element@1.0-impl.so
 vendor/lib64/jcos_nq_client.so
 vendor/lib64/ls_nq_client.so
 vendor/lib64/se_nq_extn_client.so
