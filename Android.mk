@@ -37,6 +37,44 @@ ALL_DEFAULT_INSTALLED_MODULES += \
 	$(DSP_MOUNT_POINT) \
 	$(VM_SYSTEM_MOUNT_POINT)
 
+IMS_LIBS := libimscamera_jni.so libimsmedia_jni.so
+IMS_SYMLINKS := $(addprefix $(TARGET_OUT_SYSTEM_EXT_APPS_PRIVILEGED)/ims/lib/arm64/,$(notdir $(IMS_LIBS)))
+$(IMS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "IMS lib link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /system_ext/lib64/$(notdir $@) $@
+	
+CNE_LIBS := libvndfwk_detect_jni.qti_vendor.so
+CNE_SYMLINKS := $(addprefix $(TARGET_OUT_VENDOR_APPS)/CneApp/lib/arm64/,$(notdir $(CNE_LIBS)))
+$(CNE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "CNE lib link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /vendor/lib64/$(notdir $@) $@
+
+EGL_LIB_SYMLINKS := $(TARGET_OUT_VENDOR)/lib
+$(EGL_LIB_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "EGL lib symlinks: $@"
+	@mkdir -p $@
+	$(hide) ln -sf egl/libEGL_adreno.so $@/libEGL_adreno.so
+	$(hide) ln -sf egl/libGLESv2_adreno.so $@/libGLESv2_adreno.so
+	$(hide) ln -sf egl/libq3dtools_adreno.so $@/libq3dtools_adreno.so
+
+EGL_LIB64_SYMLINKS := $(TARGET_OUT_VENDOR)/lib64
+$(EGL_LIB64_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "EGL lib64 symlinks: $@"
+	@mkdir -p $@
+	$(hide) ln -sf egl/libEGL_adreno.so $@/libEGL_adreno.so
+	$(hide) ln -sf egl/libGLESv2_adreno.so $@/libGLESv2_adreno.so
+	$(hide) ln -sf egl/libq3dtools_adreno.so $@/libq3dtools_adreno.so
+
+ALL_DEFAULT_INSTALLED_MODULES += \
+	$(CNE_SYMLINKS) \
+	$(IMS_SYMLINKS) \
+	$(EGL_LIB_SYMLINKS) \
+	$(EGL_LIB64_SYMLINKS)
+
 RFS_MDM_ADSP_SYMLINKS := $(TARGET_OUT_VENDOR)/rfs/mdm/adsp/
 $(RFS_MDM_ADSP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "Creating RFS MDM ADSP folder structure: $@"
