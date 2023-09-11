@@ -19,9 +19,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 # Enable virtual AB with vendor ramdisk
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 
-# GMS
-$(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
-
 # Inherit from the proprietary version
 $(call inherit-product, vendor/xiaomi/socrates/socrates-vendor.mk)
 
