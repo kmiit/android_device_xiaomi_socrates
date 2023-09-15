@@ -78,17 +78,20 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     audio.bluetooth.default \
+    audio.primary.default \
     audio.r_submix.default \
     audio.usb.default
 
-# # Audio
-# RODUCT_COPY_FILES += \
+PRODUCT_PACKAGES += \
+    libalsautils
+
+# PRODUCT_COPY_FILES += \
 #    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/audio/odm/,$(TARGET_COPY_OUT_ODM)/etc/audio/sku_kalama/)
 
-# RODUCT_COPY_FILES += \
+# PRODUCT_COPY_FILES += \
 #    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/audio/vendor/,$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_kalama/)
 
-# RODUCT_COPY_FILES += \
+# PRODUCT_COPY_FILES += \
 #    $(LOCAL_PATH)/audio/audio_policy_configuration_a2dp_offload_disabled.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_kalama/audio_policy_configuration.xml \
 #    $(LOCAL_PATH)/audio/backend_conf.xml:$(TARGET_COPY_OUT_ODM)/etc/backend_conf.xml \
 #    $(LOCAL_PATH)/audio/card-defs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/card-defs.xml \
@@ -111,6 +114,8 @@ PRODUCT_PACKAGES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.1.vendor \
+    android.hardware.bluetooth.audio-impl \
+    libbluetooth_audio_session \
     vendor.qti.hardware.bluetooth.audio-V1-ndk.vendor \
     vendor.qti.hardware.bluetooth_audio@2.1.vendor \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
@@ -154,23 +159,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.capabilityconfigstore@1.0.vendor
 
-# Consumer IR AIDL
-PRODUCT_PACKAGES += \
-    android.hardware.ir-service.example
-
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml
-
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3.vendor \
     android.hardware.drm-service.clearkey \
     libdrm.vendor
-
-# Face
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.face@1.0.vendor \
-    android.hardware.biometrics.face@1.0
 
 # Fastbootd
 PRODUCT_PACKAGES += \
@@ -281,11 +274,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.keystore.app_attest_key.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.keystore.app_attest_key.xml
 
+# Local time
+PRODUCT_PACKAGES += \
+    local_time.default
+
 # Media
 PRODUCT_PACKAGES += \
     android.hardware.media.c2@1.0.vendor \
     android.hardware.media.c2@1.1.vendor \
     android.hardware.media.c2@1.2.vendor \
+    android.hardware.media.omx@1.0-service \
     libavservices_minijail \
     libavservices_minijail_vendor \
     libavservices_minijail.vendor \
@@ -294,11 +292,32 @@ PRODUCT_PACKAGES += \
     libcodec2_hidl@1.1.vendor \
     libcodec2_hidl@1.2.vendor \
     libcodec2_vndk.vendor \
-    libsfplugin_ccodec_utils.vendor
+    libmedia_codeclist \
+    libsfplugin_ccodec_utils.vendor \
+    libstagefrighthw \
+    libstagefright_codecbase \
+    libstagefright_bufferpool@2.0.1.vendor \
+    libstagefright_framecapture_utils \
+    libstagefright_softomx_plugin \
+    libstagefright_omx.vendor
 
 PRODUCT_PACKAGES += \
     init.qti.media.rc \
     init.qti.media.sh
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/audio/codecs/media_codecs_c2_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2_audio.xml \
+    $(LOCAL_PATH)/audio/codecs/media_codecs_vendor_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_vendor_audio.xml
+
+
+PRODUCT_COPY_FILES += \
+    frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_c2_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2_audio.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_c2_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2_video.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_telephony.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml
 
 # Network
 PRODUCT_PACKAGES += \
