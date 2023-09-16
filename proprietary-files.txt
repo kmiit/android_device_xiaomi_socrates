@@ -360,6 +360,7 @@ odm/lib/camera/fdconfigvideolite.bin
 odm/lib/libmialgo_utils.so
 odm/lib/libxmi_slow_motion_mein.so
 odm/lib64/libalAILDC.so
+odm/lib64/libdeflickerNM.so
 odm/lib64/camera/com.qti.tuned.default.bin
 odm/lib64/camera/fdconfigpreview.bin
 odm/lib64/camera/fdconfigpreviewlite.bin
@@ -776,10 +777,10 @@ odm/lib/camera/com.qti.tuned.socrates_ofilm_ov16a1q_front.bin
 odm/lib/camera/com.qti.tuned.socrates_semco_imx800_wide.bin
 odm/lib/camera/com.qti.tuned.socrates_sunny_ov02b10_macro.bin
 odm/lib/camera/com.qti.tuned.tpg.bin
-odm/lib/libmiface.so
-odm/lib/libmituning_datacenter.so
-odm/lib/libmituning_datacenter_base.so
-odm/lib/libmituning_utils.so
+odm/lib64/libmiface.so
+odm/lib64/libmituning_datacenter.so
+odm/lib64/libmituning_datacenter_base.so
+odm/lib64/libmituning_utils.so
 odm/lib64/camera/com.qti.actuator.socrates_semco_imx800_dw9825a_wide_actuator.so
 odm/lib64/camera/com.qti.eeprom.socrates_ofilm_ov08d10_p24c64f_ultra_eeprom.so
 odm/lib64/camera/com.qti.eeprom.socrates_ofilm_ov16a1q_gt24p64e_front_eeprom.so
