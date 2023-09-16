@@ -273,29 +273,11 @@ vendor/lib64/soundfx/libvolumelistener.so
 
 # Audio configs
 system/etc/audio_effects.conf
-odm/etc/audio/sku_kalama/mixer_paths_kalama_mtp.xml
-odm/etc/audio/sku_kalama/mixer_paths_overlay_dynamic.xml
-odm/etc/audio/sku_kalama/mixer_paths_overlay_static.xml
-odm/etc/audio/sku_kalama/resourcemanager_kalama_mtp.xml
 odm/etc/audio/hrtf5c.bin
 odm/etc/audio_policy_engine_configuration_mi.xml
 odm/etc/audio_policy_engine_default_stream_volumes.xml
 odm/etc/audio_policy_engine_product_strategies.xml
 odm/etc/audio_policy_engine_stream_volumes.xml
-vendor/etc/audio/sku_kalama/adsp_sleep_monitor.conf
-vendor/etc/audio/sku_kalama/audio_effects.conf
-vendor/etc/audio/sku_kalama/audio_effects.xml
-vendor/etc/audio/sku_kalama/audio_policy_configuration.xml
-vendor/etc/audio/sku_kalama/mixer_paths_kalama_cdp.xml
-vendor/etc/audio/sku_kalama/mixer_paths_kalama_cdp_wsa883x.xml
-vendor/etc/audio/sku_kalama/mixer_paths_kalama_grd.xml
-vendor/etc/audio/sku_kalama/mixer_paths_kalama_mtp.xml
-vendor/etc/audio/sku_kalama/mixer_paths_kalama_qrd.xml
-vendor/etc/audio/sku_kalama/resourcemanager_kalama_cdp.xml
-vendor/etc/audio/sku_kalama/resourcemanager_kalama_grd.xml
-vendor/etc/audio/sku_kalama/resourcemanager_kalama_mtp.xml
-vendor/etc/audio/sku_kalama/resourcemanager_kalama_qrd.xml
-vendor/etc/audio/sku_kalama_qssi/audio_policy_configuration.xml
 vendor/etc/a2dp_audio_policy_configuration.xml
 vendor/etc/audio_policy_configuration.xml
 vendor/etc/audio_policy_volumes.xml
@@ -4004,7 +3986,6 @@ odm/bin/touch_report
 odm/bin/toucheventcheck
 # odm/bin/vib_cal
 
-odm/etc/backend_conf.xml
 # odm/etc/default.lm
 # odm/etc/device_info_qr_config.yml
 # odm/etc/device_sar_config.xml
@@ -4023,28 +4004,6 @@ odm/firmware/goodix_test_limits_255.csv
 # odm/lib/libvsim.so
 # vendor/bin/hw/mfp-daemon
 # vendor/bin/hw/vendor.qti.hardware.display.demura-service
-# vendor/etc/display/backlight_calib_r66451_amoled_cmd_mode_dsi_visionox_panel_with_DSC.xml
-# vendor/etc/display/backlight_calib_r66451_amoled_video_mode_dsi_visionox_panel_with_DSC.xml
-# vendor/etc/display/backlight_calib_vtdr6130_amoled_cmd_mode_dsi_visionox_panel_with_DSC.xml
-# vendor/etc/display/backlight_calib_vtdr6130_amoled_qsync_cmd_mode_dsi_visionox_panel_with_DSC.xml
-# vendor/etc/display/backlight_calib_vtdr6130_amoled_qsync_video_mode_dsi_visionox_panel_with_DSC.xml
-# vendor/etc/display/backlight_calib_vtdr6130_amoled_video_mode_dsi_visionox_panel_with_DSC.xml
-# vendor/etc/display/qdcm_calib_data_Sharp_2k_cmd_mode_qsync_dsi_panel.json
-# vendor/etc/display/qdcm_calib_data_Sharp_2k_video_mode_qsync_dsi_panel.json
-# vendor/etc/display/qdcm_calib_data_Sharp_4k_cmd_mode_dsc_dsi_panel.json
-# vendor/etc/display/qdcm_calib_data_Sharp_4k_video_mode_dsc_dsi_panel.json
-# vendor/etc/display/qdcm_calib_data_Sharp_qhd_cmd_mode_dsi_panel.json
-# vendor/etc/display/qdcm_calib_data_nt36672e_lcd_video_mode_dsi_novatek_panel_with_DSC.json
-# vendor/etc/display/qdcm_calib_data_nt36672e_lcd_video_mode_dsi_novatek_panel_without_DSC.json
-# vendor/etc/display/qdcm_calib_data_r66451_amoled_cmd_mode_dsi_visionox_panel_with_DSC.json
-# vendor/etc/display/qdcm_calib_data_r66451_amoled_cmd_mode_dsi_visionox_panel_without_DSC.json
-# vendor/etc/display/qdcm_calib_data_r66451_amoled_video_mode_dsi_visionox_panel_with_DSC.json
-# vendor/etc/display/qdcm_calib_data_r66451_amoled_video_mode_dsi_visionox_panel_without_DSC.json
-# vendor/etc/display/qdcm_calib_data_sharp_1080p_cmd_mode_dsi_panel.json
-# vendor/etc/display/qdcm_calib_data_vtdr6130_amoled_cmd_mode_dsi_visionox_panel_with_DSC.json
-# vendor/etc/display/qdcm_calib_data_vtdr6130_amoled_qsync_cmd_mode_dsi_visionox_panel_with_DSC.json
-# vendor/etc/display/qdcm_calib_data_vtdr6130_amoled_qsync_video_mode_dsi_visionox_panel_with_DSC.json
-# vendor/etc/display/qdcm_calib_data_vtdr6130_amoled_video_mode_dsi_visionox_panel_with_DSC.json
 # vendor/etc/init/boringssl_self_test.rc
 # vendor/etc/init/init.qti.media.rc
 # vendor/etc/init/vndservicemanager.rc
@@ -4054,12 +4013,9 @@ odm/firmware/goodix_test_limits_255.csv
 # vendor/etc/IPACM_Filter_cfg.xml
 # vendor/etc/UrlSign.xml
 # vendor/etc/audio_diag.cfg
-vendor/etc/card-defs.xml
 # vendor/etc/excluded-input-devices.xml
-vendor/etc/microphone_characteristics.xml
 # vendor/etc/mkshrc
 # vendor/etc/usb_compositions.conf
-vendor/etc/usecaseKvManager.xml
 # vendor/lib/libGLESv2_adreno.so
 # vendor/lib/libboot_control_qti.so
 # vendor/lib/libcamera2ndk_vendor.so
