@@ -159,6 +159,9 @@ vendor/bin/agmhostless
 vendor/bin/agmplay
 vendor/bin/agmvoiceui
 vendor/bin/cplay
+-vendor/lib/libagm.so
+-vendor/lib/vendor.qti.hardware.AGMIPC@1.0-impl.so
+vendor/lib/vendor.qti.hardware.AGMIPC@1.0.so
 vendor/lib64/libagm_compress_plugin.so
 vendor/lib64/libagm_mixer_plugin.so
 vendor/lib64/libagm_pcm_plugin.so
@@ -313,6 +316,8 @@ vendor/lib64/hw/audio.bluetooth_qti.default.so
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.bttpi-impl.so
 vendor/lib64/lib_bt_aptx.so
 vendor/lib64/lib_bt_ble.so
