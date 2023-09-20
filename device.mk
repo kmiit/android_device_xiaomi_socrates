@@ -60,6 +60,10 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_vendor=ext4 \
     POSTINSTALL_OPTIONAL_vendor=true
 
+# APN
+PRODUCT_COPY_FILES += \
+    vendor/lineage/prebuilt/common/etc/apns-conf.xml:/system/etc/apns-conf.xml
+
 # Atrace
 PRODUCT_PACKAGES += \
     android.hardware.atrace@1.0-service
@@ -86,7 +90,16 @@ PRODUCT_PACKAGES += \
     libalsautils \
     libvolumelistener \
     audioadsprpcd \
-    sound_trigger.primary.kalama
+    sound_trigger.primary.kalama \
+    libtinycompress \
+    libsndcardparser \
+    libqcomvoiceprocessing \
+    libqcomvisualizer \
+    libqcompostprocbundle \
+    libbatterylistener \
+    libagm_pcm_plugin \
+    libagm_mixer_plugin \
+    libagm_compress_plugin
 
 AUDIO_HAL_DIR := hardware/qcom-caf/sm8550/audio/primary-hal
 
@@ -284,10 +297,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.keystore.app_attest_key.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.keystore.app_attest_key.xml
 
-# Local time
-PRODUCT_PACKAGES += \
-    local_time.default
-
 # Media
 PRODUCT_PACKAGES += \
     android.hardware.media.c2@1.0.vendor \
@@ -316,9 +325,12 @@ PRODUCT_PACKAGES += \
     init.qti.media.sh
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/codecs/media_codecs_c2_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2_audio.xml \
-    $(LOCAL_PATH)/audio/codecs/media_codecs_vendor_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_vendor_audio.xml
-
+    $(AUDIO_HAL_DIR)/configs/common/codec2/media_codecs_c2_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2_audio.xml \
+    $(AUDIO_HAL_DIR)/configs/common/codec2/service/1.0/c2audio.vendor.base-arm.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/c2audio.vendor.base-arm.policy \
+    $(AUDIO_HAL_DIR)/configs/common/codec2/service/1.0/c2audio.vendor.base-arm64.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/c2audio.vendor.base-arm64.policy \
+    $(AUDIO_HAL_DIR)/configs/common/codec2/service/1.0/c2audio.vendor.ext-arm.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/c2audio.vendor.ext-arm.policy \
+    $(AUDIO_HAL_DIR)/configs/common/codec2/service/1.0/c2audio.vendor.ext-arm64.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/c2audio.vendor.ext-arm64.policy \
+    $(AUDIO_HAL_DIR)/configs/common/media_codecs_vendor_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_vendor_audio.xml
 
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
@@ -370,10 +382,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := false
 
-# Parts
-PRODUCT_PACKAGES += \
-    XiaomiParts
-
 # Properties
 include $(LOCAL_PATH)/properties/default.mk
 
@@ -404,9 +412,17 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
+    android.hardware.radio@1.6.vendor \
     android.hardware.radio.config@1.3.vendor \
     android.hardware.radio.deprecated@1.0.vendor \
+    libprotobuf-cpp-full \
+    librmnetctl 
 
+PRODUCT_PACKAGES += \
+    ims \
+    QtiTelephony \
+    qti-telephony-common
+    
 # Rootdir
 PRODUCT_PACKAGES += \
     fstab.qcom \
@@ -429,7 +445,8 @@ PRODUCT_PACKAGES += \
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.multihal \
-    libsensorndkbridge
+    libsensorndkbridge \
+    sensors.xiaomi
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/sku_kalama/android.hardware.sensor.accelerometer.xml \
@@ -440,16 +457,12 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.stepcounter.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/sku_kalama/android.hardware.sensor.stepcounter.xml \
     frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/sku_kalama/android.hardware.sensor.stepdetector.xml
 
-# Sensors
- PRODUCT_PACKAGES += \
-     sensors.xiaomi
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
 
 # Servicetracker
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.servicetracker@1.2.vendor
+    vendor.qti.hardware.servicetracker@1.2.vendor 
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
@@ -505,7 +518,6 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb.gadget@1.1-service-qti \
     android.hardware.usb@1.3-service-qti
 
 PRODUCT_COPY_FILES += \
