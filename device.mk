@@ -47,6 +47,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     com.dsi.ant@1.0.vendor
 
+# APN
+PRODUCT_COPY_FILES += \
+    vendor/lineage/prebuilt/common/etc/apns-conf.xml:/system/etc/apns-conf.xml
+    
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
@@ -376,6 +380,7 @@ PRODUCT_PACKAGES += \
     SystemUIResCommon \
     SettingsResCommonXiaomi \
     SystemUIResCommonSocrates \
+    TelephonyResCommon \
     WifiResTarget
 
 # Partitions
@@ -422,7 +427,7 @@ PRODUCT_PACKAGES += \
     ims \
     QtiTelephony \
     qti-telephony-common
-    
+
 # Rootdir
 PRODUCT_PACKAGES += \
     fstab.qcom \
@@ -462,7 +467,7 @@ PRODUCT_COPY_FILES += \
 
 # Servicetracker
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.servicetracker@1.2.vendor 
+    vendor.qti.hardware.servicetracker@1.2.vendor
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
