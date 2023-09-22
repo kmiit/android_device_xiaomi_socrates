@@ -1,0 +1,2 @@
+allow vendor_qsap_location vendor_location_data_file:dir { search };
+allow vendor_dcfd vendor_sensors_debug_prop:file { read };

@@ -7,3 +7,4 @@ set_prop(rild, vendor_sno_prop)
 #set_prop(rild, default_prop)
 allow rild vendor_data_file:dir create_dir_perms;
 allow rild vendor_data_file:file create_file_perms;
+# allow rild default_prop:file { read };

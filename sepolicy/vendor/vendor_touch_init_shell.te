@@ -1,0 +1,2 @@
+type vendor_touch_init_shell, domain;
+type vendor_touch_init_shell_exec, exec_type, vendor_file_type, file_type;

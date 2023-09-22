@@ -124,6 +124,9 @@
 /sys/devices/virtual/thermal/thermal_message/flash_state u:object_r:sys_thermal_flash_state:s0
 /sys/devices/virtual/thermal/thermal_message/wifi_limit u:object_r:sys_thermal_wifi_limit:s0
 
+# Touchfeature
+/odm/etc/init.panel_info.sh                             u:object_r:vendor_touch_init_shell_exec:s0
+
 # Touchscreen
 /(vendor|system/vendor)/bin/touch_report u:object_r:touchreport_exec:s0
 /data/vendor/touch(/.*)? u:object_r:vendor_data_touchreport_file:s0
