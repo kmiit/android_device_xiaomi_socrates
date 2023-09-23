@@ -1,0 +1,23 @@
+allow init incident_exec:file { getattr };
+allow init incident_helper_exec:file { getattr };
+allow init migrate_legacy_obb_data_exec:file { getattr };
+allow init postinstall_dexopt_exec:file { getattr };
+allow init postinstall_exec:file { getattr };
+allow init viewcompiler_exec:file { getattr };
+allow system_suspend sysfs:dir { read open };
+
+allow init otapreopt_chroot_exec:file { getattr };
+
+allow tee boot_block_device:blk_file { read };
+
+allow init blkid_exec:file { getattr };
+
+# allow init sysfs:file { write };
+
+# allow vendor_hal_gnss_qti default_prop:file { read };
+
+# allow hal_mtdservice_default hal_mtdservice_default:capability { sys_admin dac_override dac_read_search};
+
+# allow shell kernel:system { syslog_read };
+# allow rild default_prop:file r_file_perms;
+# allow tee device:chr_file { read write open ioctl };

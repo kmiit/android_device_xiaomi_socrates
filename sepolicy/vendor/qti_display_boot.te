@@ -1,0 +1,1 @@
+allow qti_display_boot vendor_displayfeature_prop:property_service { set };

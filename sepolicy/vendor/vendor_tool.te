@@ -15,3 +15,4 @@ allow vendor_dtool property_socket:sock_file write;
 unix_socket_connect(vendor_dtool, property, init);
 get_prop(vendor_dtool, vendor_fp_prop);
 set_prop(vendor_dtool, vendor_fp_prop);
+

@@ -9,3 +9,5 @@ get_prop(vendor_touch_init_shell , vendor_panel_info_prop )
 set_prop(vendor_touch_init_shell , vendor_panel_info_prop )
 get_prop(vendor_touch_init_shell , vendor_touchfeature_prop )
 set_prop(vendor_touch_init_shell , vendor_touchfeature_prop )
+
+allow vendor_touch_init_shell vendor_shell_exec:file { entrypoint };

@@ -1,11 +1,26 @@
+# type blkid, domain, domain_deprecated;
+# type blkid_exec, exec_type, file_type;
+
 allow init ddr_training_exec:file { execute getattr open read };
+allow init dnsmasq_exec:file { getattr };
+allow init hal_touchfeature_xiaomi_default_exec:file { read getattr map execute open };
+allow init netutils_wrapper_exec:file { getattr };
+allow init ppp_exec:file { getattr };
+allow init rs_exec:file { getattr };
+allow init runas_exec:file { getattr };
+allow init sdcardd_exec:file { getattr };
+allow init sgdisk_exec:file { getattr };
+allow init simpleperf_app_runner_exec:file { getattr };
 allow init slad_exec:file { getattr open read };
 allow init sla_data_file:file rw_file_perms;
-allow init hal_touchfeature_xiaomi_default_exec:file { read getattr map execute open };
-allow init vendor_touch_init_shell_exec:file { read getattr map execute open };
+allow init tcpdump_exec:file { getattr };
 allow init tpevent_exec:file { read getattr map execute open };
+allow init vendor_touch_init_shell_exec:file { read getattr map execute open };
+allow init vendor_touch_init_shell:process { transition };
+allow init vold_prepare_subdirs_exec:file { getattr };
 allow vendor_init vendor_ddr_prop:property_service set;
 set_prop(vendor_init, vendor_fp_prop)
 set_prop(vendor_init, vendor_fp_info_prop)
 set_prop(vendor_init, vendor_qcc_prop)
 allow vendor_init cgroup:file getattr;
+
