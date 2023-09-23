@@ -3044,6 +3044,9 @@ vendor/lib64/libtime_genoff.so
 
 # TouchFeature
 odm/bin/hw/vendor.xiaomi.hw.touchfeature@1.0-service
+odm/bin/touch_raw
+odm/bin/touch_report
+odm/bin/toucheventcheck
 odm/etc/init.panel_info.sh
 odm/etc/init/vendor.xiaomi.hw.touchfeature@1.0-service.rc
 odm/etc/vintf/manifest/vendor.xiaomi.hw.touchfeature@1.0-service.xml
@@ -3813,20 +3816,8 @@ odm/lib64/libteeclientjni.so
 odm/lib64/libwrapper_dlengine.so
 odm/lib64/libwvkeybox.so
 
-###
-# Miscellaneous
-odm/bin/touch_raw
-odm/bin/touch_report
-odm/bin/toucheventcheck
-# odm/bin/vib_cal
 
-# odm/etc/default.lm
-# odm/etc/device_info_qr_config.yml
-# odm/etc/device_sar_config.xml
-# odm/etc/merged_language_model.lat
-# odm/etc/mimdconfig
-# odm/etc/socrates_4.2.9.prop
-# odm/etc/socrates_4.9.9.prop
+
 odm/firmware/goodix_cfg_group_m11.bin
 odm/firmware/goodix_cfg_group_m11_new.bin
 odm/firmware/goodix_firmware_m11.bin
@@ -3835,37 +3826,3 @@ odm/firmware/goodix_normalize.csv
 odm/firmware/goodix_normalize_1.csv
 odm/firmware/goodix_test_limits_1_255.csv
 odm/firmware/goodix_test_limits_255.csv
-# odm/lib/libvsim.so
-# vendor/bin/hw/mfp-daemon
-# vendor/bin/hw/vendor.qti.hardware.display.demura-service
-# vendor/etc/init/boringssl_self_test.rc
-# vendor/etc/init/init.qti.media.rc
-# vendor/etc/init/vndservicemanager.rc
-# vendor/etc/vintf/manifest/AHBF@2.1-service.xml
-# vendor/etc/vintf/manifest/power.xml
-# vendor/etc/vintf/manifest_kalama.xml
-# vendor/etc/IPACM_Filter_cfg.xml
-# vendor/etc/UrlSign.xml
-# vendor/etc/audio_diag.cfg
-# vendor/etc/excluded-input-devices.xml
-# vendor/etc/mkshrc
-# vendor/etc/usb_compositions.conf
-# vendor/lib/libGLESv2_adreno.so
-# vendor/lib/libboot_control_qti.so
-# vendor/lib/libcamera2ndk_vendor.so
-# vendor/lib/libcheckpid.so
-# vendor/lib/liblogwrap_vendor.so
-# vendor/lib/libq3dtools_adreno.so
-# vendor/lib/libsfplugin_ccodec_utils.so
-# vendor/lib/libvndfwk_detect_jni.qti.so
-# vendor/lib/libvndfwk_detect_jni.qti_vendor.so
-# vendor/lib/libvpx.so
-# vendor/lib64/libGLESv2_adreno.so
-# vendor/lib64/libcamera2ndk_vendor.so
-# vendor/lib64/libcheckpid.so
-# vendor/lib64/liblogwrap_vendor.so
-# vendor/lib64/libnetfilter_conntrack.so
-# vendor/lib64/libnfnetlink.so
-# vendor/lib64/libq3dtools_adreno.so
-# vendor/lib64/libsfplugin_ccodec_utils.so
-###
