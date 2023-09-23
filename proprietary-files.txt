@@ -3432,7 +3432,7 @@ vendor/etc/vintf/manifest/android.hardware.radio.network.xml
 vendor/etc/vintf/manifest/android.hardware.radio.sim.xml
 vendor/etc/vintf/manifest/android.hardware.radio.voice.xml
 vendor/etc/vintf/manifest/deviceinfo-saidl.xml
-vendor/etc/vintf/manifest/dumpstate-xiaomi.xml
+# vendor/etc/vintf/manifest/dumpstate-xiaomi.xml
 vendor/etc/vintf/manifest/memtrack_qti.xml
 vendor/etc/vintf/manifest/qcrilhook-saidl.xml
 vendor/etc/vintf/manifest/qms-saidl.xml
@@ -3480,7 +3480,7 @@ vendor/bin/ftmdaemon
 vendor/bin/hal_proxy_daemon
 vendor/bin/hdcp1prov
 vendor/bin/hdcp2p2prov
-vendor/bin/hw/android.hardware.dumpstate-service.xiaomi
+# vendor/bin/hw/android.hardware.dumpstate-service.xiaomi
 vendor/bin/hw/android.hardware.health-service.qti
 vendor/bin/hw/android.hardware.nfc@1.2-service-st
 vendor/bin/hw/capabilityconfigstoretest
@@ -3545,15 +3545,15 @@ vendor/etc/init/android.hardware.health-service.qti.rc
 vendor/etc/init/android.hardware.nfc@1.2-service-st.rc
 vendor/etc/init/dcfd.rc
 vendor/etc/init/ddr_training.rc
-vendor/etc/init/dumpstate-xiaomi.rc
+# vendor/etc/init/dumpstate-xiaomi.rc
 vendor/etc/init/ffu.rc
 vendor/etc/init/hw/init.qcom.factory.rc
 vendor/etc/init/hw/init.qti.ufs.rc
 vendor/etc/init/init.charge_logger.rc
 vendor/etc/init/init.hwinfo.rc
 vendor/etc/init/init.qccvendor.rc
-vendor/etc/init/init.spuservice.rc
-vendor/etc/init/init.vendor.qti.spu@1.1-service.rc
+# vendor/etc/init/init.spuservice.rc
+# vendor/etc/init/init.vendor.qti.spu@1.1-service.rc
 vendor/etc/init/libxiaomi_qcril.rc
 vendor/etc/init/memtrack_qti.rc
 vendor/etc/init/minidump.rc

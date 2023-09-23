@@ -192,12 +192,12 @@ PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
     libdrm.vendor
 
-# DumpState
-PRODUCT_PACKAGES += \
-    android.hardware.dumpstate@1.0.vendor \
-    android.hardware.dumpstate@1.1.vendor \
-    android.hardware.dumpstate-V1-ndk \
-    libdumpstateutil
+# # DumpState
+# PRODUCT_PACKAGES += \
+#     android.hardware.dumpstate@1.0.vendor \
+#     android.hardware.dumpstate@1.1.vendor \
+#     android.hardware.dumpstate-V1-ndk \
+#     libdumpstateutil
 
 # Fastbootd
 PRODUCT_PACKAGES += \
