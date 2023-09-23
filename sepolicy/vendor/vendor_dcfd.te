@@ -1,0 +1,1 @@
+allow vendor_dcfd vendor_sensors_debug_prop:file { open getattr map };

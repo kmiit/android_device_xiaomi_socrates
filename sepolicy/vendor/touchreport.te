@@ -5,6 +5,7 @@ init_daemon_domain(touchreport)
 
 allow touchreport input_device:chr_file rw_file_perms;
 allow touchreport input_device:dir r_dir_perms;
+allow touchreport proc:file { read write open };
 allow touchreport proc_tp_file:file { open read write };
 allow touchreport self:cap_userns sys_nice;
 allow touchreport self:capability sys_nice;
