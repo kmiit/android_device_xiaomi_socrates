@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from Redmi K60 Pro (V14.0.8.23.DEV). 
+## are from Redmi K60 Pro (V14.0.24.DEV). 
 
 # ACDBs
 vendor/etc/acdbdata/IDP_UPD/IDP_UPD_acdb_cal.acdb
@@ -3423,7 +3423,6 @@ vendor/lib64/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so
 vendor/bin/nv_mac
 
 # vendor
-vendor/etc/vintf/manifest/android.hardware.health-service.qti.xml
 vendor/etc/vintf/manifest/android.hardware.radio.config.xml
 vendor/etc/vintf/manifest/android.hardware.radio.data.xml
 vendor/etc/vintf/manifest/android.hardware.radio.messaging.xml
@@ -3480,8 +3479,6 @@ vendor/bin/ftmdaemon
 vendor/bin/hal_proxy_daemon
 vendor/bin/hdcp1prov
 vendor/bin/hdcp2p2prov
-# vendor/bin/hw/android.hardware.dumpstate-service.xiaomi
-vendor/bin/hw/android.hardware.health-service.qti
 vendor/bin/hw/android.hardware.nfc@1.2-service-st
 vendor/bin/hw/capabilityconfigstoretest
 vendor/bin/hw/fbo-test
@@ -3541,19 +3538,15 @@ vendor/etc/charger_diag.cfg
 vendor/etc/charger_fw_fstab.qti
 vendor/etc/clstc_config_library.xml
 vendor/etc/hrtf5c.bin
-vendor/etc/init/android.hardware.health-service.qti.rc
 vendor/etc/init/android.hardware.nfc@1.2-service-st.rc
 vendor/etc/init/dcfd.rc
 vendor/etc/init/ddr_training.rc
-# vendor/etc/init/dumpstate-xiaomi.rc
 vendor/etc/init/ffu.rc
 vendor/etc/init/hw/init.qcom.factory.rc
 vendor/etc/init/hw/init.qti.ufs.rc
 vendor/etc/init/init.charge_logger.rc
 vendor/etc/init/init.hwinfo.rc
 vendor/etc/init/init.qccvendor.rc
-# vendor/etc/init/init.spuservice.rc
-# vendor/etc/init/init.vendor.qti.spu@1.1-service.rc
 vendor/etc/init/libxiaomi_qcril.rc
 vendor/etc/init/memtrack_qti.rc
 vendor/etc/init/minidump.rc
@@ -3824,5 +3817,5 @@ odm/firmware/goodix_firmware_m11.bin
 odm/firmware/goodix_firmware_m11_new.bin
 odm/firmware/goodix_normalize.csv
 odm/firmware/goodix_normalize_1.csv
-odm/firmware/goodix_test_limits_1_255.csv
-odm/firmware/goodix_test_limits_255.csv
+# odm/firmware/goodix_test_limits_1_255.csv
+# odm/firmware/goodix_test_limits_255.csv
