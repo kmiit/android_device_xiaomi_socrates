@@ -1,13 +1,5 @@
-get_prop(vendor_init, vendor_displayfeature_prop)
-set_prop(vendor_init, vendor_displayfeature_prop)
+allow vendor_init cgroup:file getattr;
 allow vendor_init device:chr_file { getattr };
 allow vendor_init block_device:lnk_file { setattr };
-
-# allow rild default_prop:file { read };
-allow rild minidump_data_file:dir { search };
-
-dontaudit hal_sensors_default default_prop:file { open read getattr map };
-# allow hal_sensors_default default_prop:file { read };
-
-allow tee vendor_gpt_block_device:blk_file { open };
-allow tee vendor_xbl_block_device:blk_file { read };
+get_prop(vendor_init, vendor_displayfeature_prop)
+set_prop(vendor_init, vendor_displayfeature_prop)
