@@ -269,6 +269,10 @@ PRODUCT_PACKAGES += \
     libhidltransport.vendor \
     libhwbinder.vendor
 
+# IFAA
+PRODUCT_PACKAGES += \
+    IFAAService
+
 # IPACM
 PRODUCT_PACKAGES += \
     ipacm \
