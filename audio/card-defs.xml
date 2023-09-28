@@ -387,6 +387,20 @@
         </props>
     </compress-device>
 
+    <pcm-device>
+        <id>125</id>
+        <name>PCM125</name>
+        <pcm_plugin>
+            <so-name>libagm_pcm_plugin.so</so-name>
+        </pcm_plugin>
+        <props>
+            <playback>0</playback>
+            <capture>1</capture>
+            <session_mode>0</session_mode>
+        </props>
+    </pcm-device>
+
+
     <mixer>
         <id>1</id>
         <name>agm_mixer</name>

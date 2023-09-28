@@ -1,0 +1,9 @@
+allow init blkid_exec:file { getattr };
+allow init incident_exec:file { getattr };
+allow init incident_helper_exec:file { getattr };
+allow init migrate_legacy_obb_data_exec:file { getattr };
+allow init otapreopt_chroot_exec:file { getattr };
+allow init postinstall_dexopt_exec:file { getattr };
+allow init postinstall_exec:file { getattr };
+allow init property_type:file { append create getattr map open read relabelto rename setattr unlink write };
+allow init viewcompiler_exec:file { getattr };

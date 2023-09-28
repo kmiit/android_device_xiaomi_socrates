@@ -44,13 +44,29 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := $(TARGET_CPU_VARIANT)
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a75
 
+# Audio
+AUDIO_FEATURE_ENABLED_DLKM := true
+AUDIO_FEATURE_ENABLED_GEF_SUPPORT := true
+AUDIO_FEATURE_ENABLED_GKI := true
+AUDIO_FEATURE_ENABLED_INSTANCE_ID := true
+AUDIO_FEATURE_ENABLED_AGM_HIDL := true
+AUDIO_FEATURE_ENABLED_LSM_HIDL := true
+AUDIO_FEATURE_ENABLED_PAL_HIDL := true
+AUDIO_FEATURE_ENABLED_PROXY_DEVICE := true
+AUDIO_FEATURE_ENABLED_SSR := true
+AUDIO_FEATURE_ENABLED_SVA_MULTI_STAGE := true
+BOARD_SUPPORTS_OPENSOURCE_STHAL := true
+BOARD_SUPPORTS_SOUND_TRIGGER := true
+BOARD_USES_ALSA_AUDIO := true
+TARGET_USES_QCOM_MM_AUDIO := true
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := kalama
 TARGET_NO_BOOTLOADER := true
 TARGET_USES_UEFI := true
 
 # Display
-TARGET_SCREEN_DENSITY := 440
+TARGET_SCREEN_DENSITY := 560
 
 # DTB and DTBO
 BOARD_USES_DT := true
@@ -80,9 +96,8 @@ BOARD_KERNEL_CMDLINE := \
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
     androidboot.memcg=1 \
-    androidboot.usbcontroller=a600000.dwc3 \
-    androidboot.selinux=permissive
-
+    androidboot.usbcontroller=a600000.dwc3 
+    
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_RAMDISK_USE_LZ4 := true
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
@@ -225,9 +240,12 @@ BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 2
 # VINTF
 DEVICE_MATRIX_FILE := $(CONFIGS_PATH)/vintf/compatibility_matrix.xml
 DEVICE_MANIFEST_SKUS := kalama
-DEVICE_MANIFEST_KALAMA_FILES := $(CONFIGS_PATH)/vintf/manifest_kalama.xml
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(CONFIGS_PATH)/vintf/compatibility_matrix.device.xml \
-                                                                                              $(CONFIGS_PATH)/vintf/xiaomi_framework_compatibility_matrix.xml
+DEVICE_MANIFEST_KALAMA_FILES := \
+    $(CONFIGS_PATH)/vintf/manifest_kalama.xml \
+    $(CONFIGS_PATH)/vintf/manifest_xiaomi.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
+    $(CONFIGS_PATH)/vintf/compatibility_matrix.device.xml \
+    $(CONFIGS_PATH)/vintf/xiaomi_framework_compatibility_matrix.xml
 
 # VNDK
 BOARD_VNDK_VERSION := current

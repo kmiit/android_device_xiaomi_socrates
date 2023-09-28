@@ -1,0 +1,7 @@
+allow vendor_hal_perf_default hal_audio_default:file {  read  };
+allow vendor_hal_perf_default hal_audio_default:file {  open  };
+allow vendor_hal_perf_default hal_camera_default:dir {  search  };
+allow vendor_hal_perf_default hal_camera_default:file {  read  };
+allow vendor_hal_perf_default hal_camera_default:file {  open  };
+allow vendor_hal_perf_default vendor_shsusrd:dir {  search  };
+allow vendor_hal_perf_default vendor_shsusrd:file {  read  };

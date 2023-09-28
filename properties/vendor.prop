@@ -155,7 +155,7 @@ vendor.voice.path.for.pcm.voip=true
 persist.vendor.battery.health=true
 
 # Bluetooth
-bluetooth.profile.a2dp.source.enabled=true
+bluetooth.profile.a2dp.source.enabled?=true
 bluetooth.profile.avrcp.target.enabled=true
 bluetooth.profile.avrcp.controller.enabled=false
 bluetooth.profile.hfp.ag.enabled=true
@@ -170,7 +170,7 @@ bluetooth.profile.pan.panu.enabled=true
 bluetooth.profile.pbap.server.enabled=true
 bluetooth.profile.sap.server.enabled=false
 persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac-lhdc
-#persist.bluetooth.a2dp_offload.disabled=false
+persist.bluetooth.a2dp_offload.disabled=false
 persist.sys.fflag.override.settings_bluetooth_hearing_aid=true
 persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-lhdc
 persist.vendor.bt.aac_frm_ctl.enabled=true
@@ -182,7 +182,7 @@ persist.vendor.qcom.bluetooth.a2dp_mcast_test.enabled=false
 persist.vendor.qcom.bluetooth.scram.enabled=false
 persist.vendor.qcom.bluetooth.aac_vbr_ctl.enabled=true
 persist.vendor.qcom.bluetooth.aptxadaptiver2_1_support=true
-#ro.bluetooth.a2dp_offload.supported=true
+ro.bluetooth.a2dp_offload.supported=true
 
 # Camera
 camera.disable_zsl_mode=true
@@ -312,6 +312,8 @@ ro.surface_flinger.set_touch_timer_ms=200
 ro.surface_flinger.supports_background_blur=1
 ro.surface_flinger.use_color_management=true
 ro.surface_flinger.use_content_detection_for_refresh_rate=true
+ro.surface_flinger.set_display_power_timer_ms=1000
+ro.surface_flinger.set_idle_timer_ms=80
 ro.surface_flinger.wcg_composition_dataspace=143261696
 ro.vendor.all_modes.colorpick_adjust=true
 vendor.gralloc.disable_ubwc=0
@@ -423,6 +425,7 @@ persist.vendor.rcs.singlereg.feature=1
 
 # USB
 sys.usb.mtp.batchcancel=1
+vendor.usb.product_string=Redmi K60 Pro
 vendor.usb.rndis.func.name=gsi
 vendor.usb.rmnet.func.name=gsi
 vendor.usb.rmnet.inst.name=rmnet

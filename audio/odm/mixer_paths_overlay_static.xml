@@ -31,7 +31,7 @@
     <ctl name="T DRE Switch" value="0" />
     <ctl name="T PCM Source" value="None" />
     <ctl name="T ASPTX Ref" value="None" />
-    <ctl name="T PCM Soft Ramp" value="2ms" />
+    <ctl name="T PCM Soft Ramp" value="4ms" />
     <ctl name="T AMP PCM Gain" value="18" />
     <ctl name="T ASP TX1 Source" value="DSPTX1" />
     <ctl name="T ASP TX2 Source" value="Zero" />
@@ -50,13 +50,14 @@
     <ctl name="T Boost Target Voltage" value="0" />
     <ctl name="T Fast Use Case Switch Enable" value="1"/>
     <ctl name="T Digital PCM Volume"  value="817"/>
+    <ctl name="T Passport" value="1"/>
 
     <ctl name="B DSP1 Firmware" value="Protection" />
     <ctl name="B DSP1 Preload Switch" value="1" />
     <ctl name="B DRE Switch" value="0" />
     <ctl name="B PCM Source" value="None" />
     <ctl name="B ASPTX Ref" value="None" />
-    <ctl name="B PCM Soft Ramp" value="2ms" />
+    <ctl name="B PCM Soft Ramp" value="4ms" />
     <ctl name="B AMP PCM Gain" value="18" />
     <ctl name="B ASP TX1 Source" value="DSPTX1" />
     <ctl name="B ASP TX2 Source" value="Zero" />
@@ -74,6 +75,7 @@
     <ctl name="B Boost Target Voltage" value="0" />
     <ctl name="B Fast Use Case Switch Enable" value="1"/>
     <ctl name="B Digital PCM Volume"  value="817"/>
+    <ctl name="B Passport" value="1"/>
 
     <ctl name="T Spksw Gpio Swtich"  value="0"/>
     <!-- cirrus CS35L41 controls end -->>
@@ -88,6 +90,8 @@
         <ctl name="B AMP Enable Switch" value="1" />
         <ctl name="T Noise Gate" value="16245" />
         <ctl name="B Noise Gate" value="16245" />
+        <ctl name="T Passport" value="1"/>
+        <ctl name="B Passport" value="1"/>
     </path>
 
     <path name="speaker-mono">
@@ -161,7 +165,7 @@
         <ctl name="T ASP TX1 Source" value="ASPRX1" />
         <ctl name="T ASPTX Ref" value="Ref" />
         <ctl name="T AMP Enable Switch" value="1" />
-        <ctl name="T AMP PCM Gain" value="13" />
+        <ctl name="T AMP PCM Gain" value="15" />
     </path>
 
     <path name="handset-mic">
@@ -206,6 +210,8 @@
         <ctl name="AMIC5_MIXER Switch" value="1" />
         <ctl name="ADC1 Volume" value="6" />
         <ctl name="ADC4 Volume" value="6" />
+        <ctl name="T Passport" value="0"/>
+        <ctl name="B Passport" value="0"/>
     </path>
 
     <path name="handset-stereo-dmic-ef">
@@ -271,6 +277,27 @@
         <ctl name="HPHL_RDAC Switch" value="1" />
         <ctl name="HPHR_RDAC Switch" value="1" />
     </path>
+    <path name="handset-mic-unprocessed">
+        <ctl name="TX DEC1 MUX" value="SWR_MIC" />
+        <ctl name="TX SMIC MUX1" value="SWR_MIC4" />
+        <ctl name="TX_AIF1_CAP Mixer DEC1" value="1" />
+        <ctl name="ADC1 ChMap" value="SWRM_TX2_CH1" />
+        <ctl name="TX0 MODE" value="ADC_LP" />
+        <ctl name="ADC1_MIXER Switch" value="1" />
+        <ctl name="AMIC1_MIXER Switch" value="1" />
+        <ctl name="TX DEC3 MUX" value="SWR_MIC" />
+        <ctl name="TX SMIC MUX3" value="SWR_MIC9" />
+        <ctl name="TX_AIF1_CAP Mixer DEC3" value="1" />
+        <ctl name="ADC4 MUX" value="INP5" />
+        <ctl name="ADC4 ChMap" value="SWRM_TX3_CH2" />
+        <ctl name="TX3 MODE" value="ADC_LP" />
+        <ctl name="ADC4_MIXER Switch" value="1" />
+        <ctl name="AMIC5_MIXER Switch" value="1" />
+        <ctl name="ADC1 Volume" value="6" />
+        <ctl name="ADC4 Volume" value="6" />
+        <ctl name="TX_DEC1 Volume" value="71" />
+        <ctl name="TX_DEC3 Volume" value="71" />
+    </path>
 
     <path name="va-mic-enroll">
         <ctl name="TX_AIF1_CAP Mixer DEC0" value="1" />
@@ -305,27 +332,5 @@
         <ctl name="ADC4_MIXER Switch" value="1" />
         <ctl name="VA_DEC0 Volume" value="90" />
         <ctl name="VA_DEC1 Volume" value="90" />
-    </path>
-
-    <path name="handset-mic-unprocessed">
-        <ctl name="TX DEC1 MUX" value="SWR_MIC" />
-        <ctl name="TX SMIC MUX1" value="SWR_MIC4" />
-        <ctl name="TX_AIF1_CAP Mixer DEC1" value="1" />
-        <ctl name="ADC1 ChMap" value="SWRM_TX2_CH1" />
-        <ctl name="TX0 MODE" value="ADC_LP" />
-        <ctl name="ADC1_MIXER Switch" value="1" />
-        <ctl name="AMIC1_MIXER Switch" value="1" />
-        <ctl name="TX DEC3 MUX" value="SWR_MIC" />
-        <ctl name="TX SMIC MUX3" value="SWR_MIC9" />
-        <ctl name="TX_AIF1_CAP Mixer DEC3" value="1" />
-        <ctl name="ADC4 MUX" value="INP5" />
-        <ctl name="ADC4 ChMap" value="SWRM_TX3_CH2" />
-        <ctl name="TX3 MODE" value="ADC_LP" />
-        <ctl name="ADC4_MIXER Switch" value="1" />
-        <ctl name="AMIC5_MIXER Switch" value="1" />
-        <ctl name="ADC1 Volume" value="6" />
-        <ctl name="ADC4 Volume" value="6" />
-        <ctl name="TX_DEC1 Volume" value="71" />
-        <ctl name="TX_DEC3 Volume" value="71" />
     </path>
 </mixer>

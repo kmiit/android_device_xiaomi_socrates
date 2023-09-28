@@ -1,3 +1,6 @@
 allow tee vendor_fingerprint_data_file:dir rw_dir_perms;
 allow tee vendor_fingerprint_data_file:file rw_file_perms;
 allow tee vendor_fingerprint_data_file:file create_file_perms;
+allow tee vendor_gpt_block_device:blk_file { read };
+allow tee vendor_gpt_block_device:blk_file { open };
+allow tee vendor_xbl_block_device:blk_file { read };

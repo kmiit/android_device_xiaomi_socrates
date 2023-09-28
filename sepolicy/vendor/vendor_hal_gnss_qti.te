@@ -1,0 +1,2 @@
+allow vendor_hal_gnss_qti dmabuf_system_heap_device:chr_file { read open };
+allow vendor_hal_gnss_qti vendor_audio_prop:file { read open };

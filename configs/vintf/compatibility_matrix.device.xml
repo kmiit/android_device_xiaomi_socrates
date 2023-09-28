@@ -1209,22 +1209,6 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>vendor.xiaomi.hardware.citsensorservice</name>
-        <version>1.1</version>
-        <interface>
-            <name>ICitSensorService</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.xiaomi.hardware.citvendorservice</name>
-        <version>1.0</version>
-        <interface>
-            <name>ICitVendorService</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
         <name>vendor.xiaomi.hardware.displayfeature</name>
         <version>1.0</version>
         <interface>
@@ -1407,13 +1391,6 @@
     <hal format="hidl" optional="true">
         <name>vendor.xiaomi.sensor.citsensorservice</name>
         <version>2.0</version>
-        <interface>
-            <name>ICitSensorService</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.xiaomi.sensor.citsensorservice</name>
         <version>1.1</version>
         <interface>
             <name>ICitSensorService</name>

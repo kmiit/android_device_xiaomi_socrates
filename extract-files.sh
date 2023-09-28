@@ -65,6 +65,9 @@ function blob_fixup() {
         odm/etc/camera/night_motiontuning.xml|odm/etc/camera/night_motiontuning.xml)
             sed -i 's/xml=version/xml version/g' "${2}"
             ;;
+        odm/lib64/libxmi_high_dynamic_range_cdsp.so)
+            llvm-strip --strip-debug  "${2}"
+            ;;
     esac
 }
 

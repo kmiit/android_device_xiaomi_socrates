@@ -1,0 +1,5 @@
+allow vendor_init cgroup:file getattr;
+allow vendor_init device:chr_file { getattr };
+allow vendor_init block_device:lnk_file { setattr };
+get_prop(vendor_init, vendor_displayfeature_prop)
+set_prop(vendor_init, vendor_displayfeature_prop)
