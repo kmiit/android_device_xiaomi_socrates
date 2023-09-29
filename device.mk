@@ -192,6 +192,10 @@ PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
     libdrm.vendor
 
+# Dumpstate
+PRODUCT_PACKAGES += \
+    android.hardware.dumpstate@1.1.vendor
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
