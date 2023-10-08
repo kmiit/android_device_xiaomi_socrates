@@ -27,6 +27,19 @@ BOARD_API_LEVEL := 33
 BOARD_SHIPPING_API_LEVEL := 31
 PRODUCT_SHIPPING_API_LEVEL := 31
 
+# A/B
+AB_OTA_POSTINSTALL_CONFIG += \
+    RUN_POSTINSTALL_system=true \
+    POSTINSTALL_PATH_system=system/bin/otapreopt_script \
+    FILESYSTEM_TYPE_system=ext4 \
+    POSTINSTALL_OPTIONAL_system=true
+
+AB_OTA_POSTINSTALL_CONFIG += \
+    RUN_POSTINSTALL_vendor=true \
+    POSTINSTALL_PATH_vendor=bin/checkpoint_gc \
+    FILESYSTEM_TYPE_vendor=ext4 \
+    POSTINSTALL_OPTIONAL_vendor=true
+
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
@@ -49,24 +62,7 @@ PRODUCT_PACKAGES += \
 
 # APN
 PRODUCT_COPY_FILES += \
-    vendor/lineage/prebuilt/common/etc/apns-conf.xml:/system/etc/apns-conf.xml
-    
-# A/B
-AB_OTA_POSTINSTALL_CONFIG += \
-    RUN_POSTINSTALL_system=true \
-    POSTINSTALL_PATH_system=system/bin/otapreopt_script \
-    FILESYSTEM_TYPE_system=ext4 \
-    POSTINSTALL_OPTIONAL_system=true
-
-AB_OTA_POSTINSTALL_CONFIG += \
-    RUN_POSTINSTALL_vendor=true \
-    POSTINSTALL_PATH_vendor=bin/checkpoint_gc \
-    FILESYSTEM_TYPE_vendor=ext4 \
-    POSTINSTALL_OPTIONAL_vendor=true
-
-# APN
-PRODUCT_COPY_FILES += \
-    vendor/lineage/prebuilt/common/etc/apns-conf.xml:/system/etc/apns-conf.xml
+    $(LOCAL_PATH)/configs/apns-conf.xml:/product/etc/apns-conf.xml
 
 # Atrace
 PRODUCT_PACKAGES += \
