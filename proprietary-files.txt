@@ -268,7 +268,6 @@ vendor/lib64/soundfx/libspatializer.so
 vendor/lib64/soundfx/libswgamedap.so
 vendor/lib64/soundfx/libswspatializer.so
 vendor/lib64/soundfx/libswvqe.so
-vendor/lib64/soundfx/libvolumelistener.so
 
 # Audio configs
 system/etc/audio_effects.conf
@@ -2294,6 +2293,10 @@ vendor/lib64/libqti-perfd.so
 vendor/lib64/libqti-util.so
 vendor/lib64/libqti-utils.so
 vendor/lib64/libskewknob.so
+vendor/lib64/vendor.qti.hardware.perf@2.0.so
+vendor/lib64/vendor.qti.hardware.perf@2.1.so
+vendor/lib64/vendor.qti.hardware.perf@2.2.so
+vendor/lib64/vendor.qti.hardware.perf@2.3.so
 
 # Perf LM
 vendor/bin/hw/vendor.qti.hardware.iop@2.0-service
