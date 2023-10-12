@@ -4,12 +4,22 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Disable sparse on all filesystem images
+TARGET_USERIMAGES_SPARSE_EROFS_DISABLED := true
+TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
+TARGET_USERIMAGES_SPARSE_F2FS_DISABLED := true
+
 DEVICE_PATH := device/xiaomi/socrates
 KERNEL_PATH := $(DEVICE_PATH)-kernel
 CONFIGS_PATH := $(DEVICE_PATH)/configs
 
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+BUILD_BROKEN_CLANG_PROPERTY := true
+BUILD_BROKEN_CLANG_ASFLAGS := true
+BUILD_BROKEN_CLANG_CFLAGS := true
+BUILD_BROKEN_PYTHON_IS_PYTHON2 := true
+BUILD_BROKEN_USES_SOONG_PYTHON2_MODULES := true
 
 # A/B
 AB_OTA_UPDATER := true
@@ -31,7 +41,7 @@ AB_OTA_PARTITIONS += \
 
 # Architecture
 TARGET_ARCH := arm64
-TARGET_ARCH_VARIANT := armv8-a-branchprot
+TARGET_ARCH_VARIANT := armv9-a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := generic
@@ -90,13 +100,15 @@ BOARD_MKBOOTIMG_INIT_ARGS += --header_version $(BOARD_INIT_BOOT_HEADER_VERSION)
 BOARD_KERNEL_CMDLINE := \
     video=vfb:640x400,bpp=32,memsize=3072000 \
     disable_dma32=on \
-    swinfo.fingerprint=$(LINEAGE_VERSION) \
-    mtdoops.fingerprint=$(LINEAGE_VERSION) 
+    swinfo.fingerprint=$(DERP_VERSION) \
+    mtdoops.fingerprint=$(DERP_VERSION) 
 
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
     androidboot.memcg=1 \
-    androidboot.usbcontroller=a600000.dwc3 
+    androidboot.usbcontroller=a600000.dwc3 \
+    androidboot.init_fatal_reboot_target=recovery \
+    androidboot.selinux=permissive
     
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_RAMDISK_USE_LZ4 := true
@@ -151,9 +163,8 @@ BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := odm product system system_dlkm sy
 
 BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE := 1073741824
 BOARD_SYSTEM_EXTIMAGE_PARTITION_RESERVED_SIZE := 268435456
-BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE := 1073741824
+BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE := 268435456
 BOARD_VENDORIMAGE_PARTITION_RESERVED_SIZE := 1073741824
-BOARD_VENDOR_DLKMIMAGE_PARTITION_RESERVED_SIZE := 67108864
 
 BOARD_PARTITION_LIST := $(call to-upper, $(BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST))
 $(foreach p, $(BOARD_PARTITION_LIST), $(eval BOARD_$(p)IMAGE_FILE_SYSTEM_TYPE := ext4))
@@ -212,14 +223,11 @@ ENABLE_VENDOR_RIL_SERVICE := true
 # Vendor Boot
 PRODUCT_COPY_FILES += $(DEVICE_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
 
-# System As Root
-BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
-
 # Sepolicy
-include device/qcom/sepolicy_vndr/SEPolicy.mk
-SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
-SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
-BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+# include device/qcom/sepolicy_vndr/SEPolicy.mk
+# SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
+# SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
+# BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Verified Boot
 BOARD_AVB_ENABLE := true

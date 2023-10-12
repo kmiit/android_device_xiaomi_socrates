@@ -9,17 +9,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit common LineageOS configurations
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/derp/config/common_full_phone.mk)
 
 # Inherit device configurations
 $(call inherit-product, device/xiaomi/socrates/device.mk)
 
 # Inherit from Gapps
-$(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
+# $(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
 
 ## Device identifier
 PRODUCT_DEVICE := socrates
-PRODUCT_NAME := lineage_socrates
+PRODUCT_NAME := derp_socrates
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := 22127RK46C
 PRODUCT_MANUFACTURER := Xiaomi
@@ -32,3 +32,6 @@ BUILD_FINGERPRINT := Redmi/socrates/socrates:13/TKQ1.220905.001/V14.0.24.0.TMKCN
 
 # GMS
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+# Derp
+TARGET_SUPPORTS_QUICK_TAP := true

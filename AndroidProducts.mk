@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_socrates.mk
+    $(LOCAL_DIR)/derp_socrates.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_socrates-eng \
-    lineage_socrates-userdebug \
-    lineage_socrates-user
+    derp_socrates-eng \
+    derp_socrates-userdebug \
+    derp_socrates-user
