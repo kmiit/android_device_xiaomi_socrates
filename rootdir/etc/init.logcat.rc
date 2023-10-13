@@ -15,10 +15,27 @@ on fs
     start boot_dmesg
     start adbd_s
     start andm
+    start blocks
+    start mountss
+
 service boot_lc_main /system/bin/logcat -f /mnt/vendor/cache/boot_lc_main.txt
     class main
 
 service boot_dmesg /system/bin/sh -c "dmesg -w > /mnt/vendor/cache/boot_dmesg1.txt"
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
+service blocks /system/bin/sh -c "df -h > /mnt/vendor/cache/df-h.txt"
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
+service mountss /system/bin/sh -c "mount > /mnt/vendor/cache/mount.txt"
     class main
     user root
     group root system
