@@ -2,5 +2,5 @@
      Copyright (C) 2023 The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
-<manifest version="1.0" type="device" target-level="7">
+<manifest version="1.0" type="device">
 </manifest>
