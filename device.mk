@@ -221,6 +221,8 @@ PRODUCT_COPY_FILES += \
 # Graphics
 PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
+    libgralloc.qti \
+    libgui_vendor \
     libqdMetaData \
     vendor.display.config@1.1 \
     vendor.display.config@1.11.vendor \
