@@ -53,6 +53,7 @@ PRODUCT_PACKAGES += \
     android.hardware.light-V1-ndk_platform.vendor \
     android.hardware.memtrack-V1-ndk_platform.vendor \
     android.hardware.security.keymint-V1-ndk_platform.vendor \
+    android.hardware.security.rkp-V1-ndk_platform.vendor \
     android.hardware.security.secureclock-V1-ndk_platform.vendor \
     android.hardware.security.sharedsecret-V1-ndk_platform.vendor
 
@@ -311,7 +312,7 @@ PRODUCT_COPY_FILES += \
 # Light
 PRODUCT_PACKAGES += \
     android.hardware.light-service.xiaomi
-    
+
 # Media
 PRODUCT_PACKAGES += \
     android.hardware.media.c2@1.0.vendor \
