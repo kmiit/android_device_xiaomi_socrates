@@ -451,7 +451,8 @@ PRODUCT_PACKAGES += \
     init.recovery.usb.rc \
     init.target.rc \
     ueventd-odm.rc \
-    ueventd.qcom.rc
+    ueventd.qcom.rc \
+    init.logcat.rc
 
 # Secure element
 PRODUCT_PACKAGES += \
