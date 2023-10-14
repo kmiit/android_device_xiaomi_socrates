@@ -14,9 +14,6 @@ $(call inherit-product, vendor/derp/config/common_full_phone.mk)
 # Inherit device configurations
 $(call inherit-product, device/xiaomi/socrates/device.mk)
 
-# Inherit from Gapps
-# $(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
-
 ## Device identifier
 PRODUCT_DEVICE := socrates
 PRODUCT_NAME := derp_socrates

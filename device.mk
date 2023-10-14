@@ -450,8 +450,7 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd-odm.rc \
     ueventd.qcom.rc \
-    init.logcat.rc \
-    dmesg.sh
+    init.logcat.rc
 
 # Secure element
 PRODUCT_PACKAGES += \

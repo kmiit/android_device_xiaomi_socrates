@@ -20,7 +20,7 @@ static const variant_info_t socrates_info = {
     .device = "scorates",
     .marketname = "Redmi K60 Pro",
     .model = "22127RK46C",
-    .mod_device = "fuxi_global", // Fixed miuicamera crash
+    .mod_device = "socrates",
     .build_fingerprint = FINGERPRINT,
 };
 
