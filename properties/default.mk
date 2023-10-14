@@ -1,5 +1,5 @@
 # Adb
-ifeq ($(TARGET_BUILD_VARIANT), userdebug, eng)
+ifeq ($(TARGET_BUILD_VARIANT), userdebug)
 # /vendor/default.prop is force-setting ro.adb.secure=1
 # Get rid of that by overriding it in /product on eng builds
 PRODUCT_PRODUCT_PROPERTIES += \

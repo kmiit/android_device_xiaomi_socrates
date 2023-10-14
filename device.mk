@@ -27,6 +27,15 @@ BOARD_API_LEVEL := 33
 BOARD_SHIPPING_API_LEVEL := 31
 PRODUCT_SHIPPING_API_LEVEL := 31
 
+
+###
+# libhdradaptivecustom
+
+
+
+
+
+
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
@@ -48,6 +57,7 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 PRODUCT_PACKAGES += \
     android.hardware.common-V2-ndk.vendor \
     android.hardware.gnss-V1-ndk_platform.vendor \
+    android.hardware.gnss-V2-ndk.vendor \
     android.hardware.identity-V3-ndk_platform.vendor \
     android.hardware.identity-V4-ndk.vendor \
     android.hardware.keymaster-V3-ndk_platform.vendor \
@@ -140,6 +150,7 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio-V2-ndk.vendor \
     android.hardware.bluetooth.audio@2.0-impl \
     libbluetooth_audio_session \
+    vendor.qti.hardware.bluetooth.audio-V1-ndk.vendor \
     vendor.qti.hardware.bluetooth.audio-V2-ndk.vendor \
     vendor.qti.hardware.bluetooth_audio@2.1.vendor \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
@@ -166,6 +177,9 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    android.hardware.camera.common-V1-ndk.vendor \
+    android.hardware.camera.device-V1-ndk.vendor \
+    android.hardware.camera.provider-V1-ndk.vendor \
     android.hardware.camera.provider@2.7.vendor \
     camera.device@1.0-impl \
     libcamera2ndk_vendor \
@@ -313,6 +327,7 @@ PRODUCT_PACKAGES += \
     android.hardware.media.c2@1.1.vendor \
     android.hardware.media.c2@1.2.vendor \
     android.hardware.media.omx@1.0-service \
+    android.hardware.media.omx@1.0 \
     libavservices_minijail \
     libavservices_minijail_vendor \
     libavservices_minijail.vendor \
@@ -428,11 +443,12 @@ PRODUCT_PACKAGES += \
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.radio-V1-ndk.vendor \
-    android.hardware.radio@1.6.vendor \
+    android.hardware.radio.config-V1-ndk.vendor \
+    android.hardware.radio.sim-V1-ndk.vendor \
     android.hardware.radio.config@1.3.vendor \
     android.hardware.radio.deprecated@1.0.vendor \
+    android.hardware.radio@1.6.vendor \
     libprotobuf-cpp-full \
-    libqti_vndfwk_detect_vendor \
     librmnetctl 
 
 PRODUCT_PACKAGES += \
