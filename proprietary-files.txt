@@ -422,6 +422,7 @@ odm/lib64/libxmi_hdr_checker.so
 odm/lib64/libxmi_high_dynamic_range.so
 odm/lib64/libxmi_high_dynamic_range_cdsp.so
 odm/lib64/libxmi_slow_motion_mein.so
+system/lib64/android.hardware.camera.common-V1-ndk.so
 system/lib64/vendor.xiaomi.hardware.campostproc@1.0.so:vendor/lib64/vendor.xiaomi.hardware.campostproc@1.0.so
 vendor/bin/hw/vendor.qti.camera.provider-service_64
 vendor/bin/hw/vendor.xiaomi.hardware.quickcamera@1.0-service

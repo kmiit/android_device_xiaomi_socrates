@@ -49,6 +49,7 @@ PRODUCT_PACKAGES += \
     android.hardware.common-V2-ndk.vendor \
     android.hardware.gnss-V1-ndk_platform.vendor \
     android.hardware.identity-V3-ndk_platform.vendor \
+    android.hardware.identity-V4-ndk.vendor \
     android.hardware.keymaster-V3-ndk_platform.vendor \
     android.hardware.light-V1-ndk_platform.vendor \
     android.hardware.light-V2-ndk.vendor \
@@ -136,6 +137,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.1.vendor \
     android.hardware.bluetooth.audio-impl \
+    android.hardware.bluetooth.audio-V2-ndk.vendor \
     android.hardware.bluetooth.audio@2.0-impl \
     libbluetooth_audio_session \
     vendor.qti.hardware.bluetooth.audio-V2-ndk.vendor \
@@ -425,10 +427,12 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
+    android.hardware.radio-V1-ndk.vendor \
     android.hardware.radio@1.6.vendor \
     android.hardware.radio.config@1.3.vendor \
     android.hardware.radio.deprecated@1.0.vendor \
     libprotobuf-cpp-full \
+    libqti_vndfwk_detect_vendor \
     librmnetctl 
 
 PRODUCT_PACKAGES += \
@@ -459,6 +463,7 @@ PRODUCT_PACKAGES += \
 # Sensors
 PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0 \
+    android.frameworks.sensorservice@1.0.vendor \
     android.hardware.sensors-service.multihal \
     libsensorndkbridge \
     sensors.xiaomi
