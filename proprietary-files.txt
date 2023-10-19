@@ -1950,11 +1950,6 @@ vendor/bin/vendor_modprobe.sh
 vendor/etc/init/hw/init.qti.kernel.rc
 
 # Keymaster
-vendor/lib/libkeymasterdeviceutils.so
-vendor/lib/libkeymasterprovision.so
-vendor/lib/libkeymasterutils.so
-vendor/lib/libqcbor.so
-vendor/lib/libqtikeymaster4.so
 vendor/lib64/libkeymasterdeviceutils.so
 vendor/lib64/libkeymasterprovision.so
 vendor/lib64/libkeymasterutils.so
@@ -1966,7 +1961,6 @@ vendor/bin/hw/android.hardware.security.keymint-service-qti
 vendor/etc/init/android.hardware.security.keymint-service-qti.rc
 vendor/etc/permissions/android.hardware.hardware_keystore.xml
 vendor/etc/vintf/manifest/android.hardware.security.keymint-service-qti.xml
-vendor/lib/libqtikeymint.so
 vendor/lib64/libqtikeymint.so
 
 # Limits
@@ -2340,8 +2334,6 @@ vendor/lib64/vendor.qti.power.pasrmanager@1.0.so
 vendor/bin/pm-proxy
 vendor/bin/pm-service
 vendor/bin/pm_ioctl_app
-vendor/lib/libperipheral_client.so
-vendor/lib/libspcom.so
 vendor/lib64/libperipheral_client.so
 vendor/lib64/libspcom.so
 
@@ -3742,5 +3734,3 @@ odm/firmware/goodix_firmware_m11.bin
 odm/firmware/goodix_firmware_m11_new.bin
 odm/firmware/goodix_normalize.csv
 odm/firmware/goodix_normalize_1.csv
-# odm/firmware/goodix_test_limits_1_255.csv
-# odm/firmware/goodix_test_limits_255.csv
