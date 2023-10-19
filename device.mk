@@ -56,14 +56,9 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # AIDL NDK backend
 PRODUCT_PACKAGES += \
     android.hardware.common-V2-ndk.vendor \
-    android.hardware.gnss-V1-ndk_platform.vendor \
     android.hardware.gnss-V2-ndk.vendor \
-    android.hardware.identity-V3-ndk_platform.vendor \
     android.hardware.identity-V4-ndk.vendor \
-    android.hardware.keymaster-V3-ndk_platform.vendor \
-    android.hardware.light-V1-ndk_platform.vendor \
-    android.hardware.light-V2-ndk.vendor \
-    android.hardware.memtrack-V1-ndk_platform.vendor
+    android.hardware.light-V2-ndk.vendor
 
 # ANT+
 PRODUCT_PACKAGES += \
