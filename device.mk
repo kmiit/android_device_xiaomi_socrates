@@ -245,7 +245,6 @@ PRODUCT_PACKAGES += \
     vendor.display.config@2.0 \
     vendor.display.config@2.0.vendor \
     vendor.qti.hardware.display.allocator-service \
-    vendor.qti.hardware.display.composer-service \
     vendor.qti.hardware.display.config \
     vendor.qti.hardware.display.config-V1-ndk.vendor \
     vendor.qti.hardware.display.config-V2-ndk.vendor \
@@ -341,6 +340,7 @@ PRODUCT_PACKAGES += \
     libstagefrighthw \
     libstagefright_codecbase \
     libstagefright_bufferpool@2.0.1.vendor \
+    libstagefright_foundation.vendor \
     libstagefright_framecapture_utils \
     libstagefright_softomx_plugin \
     libstagefright_omx.vendor
@@ -401,7 +401,6 @@ PRODUCT_PACKAGES += \
     SystemUIResCommon \
     SettingsResCommonXiaomi \
     SystemUIResCommonSocrates \
-    TelephonyResCommon \
     WifiResTarget
 
 # Partitions
