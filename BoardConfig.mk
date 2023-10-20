@@ -73,6 +73,10 @@ BOARD_USES_DT := true
 BOARD_PREBUILT_DTBIMAGE_DIR := $(KERNEL_PATH)/dtbs
 BOARD_PREBUILT_DTBOIMAGE := $(KERNEL_PATH)/dtbo.img
 
+# Init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_xiaomi_socrates
+TARGET_RECOVERY_DEVICE_MODULES ?= init_xiaomi_socrates
+
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(CONFIGS_PATH)/config/config.fs
 
