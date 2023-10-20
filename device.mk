@@ -47,7 +47,6 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # AIDL NDK backend
 PRODUCT_PACKAGES += \
     android.hardware.common-V2-ndk_platform.vendor \
-    android.hardware.gnss-V1-ndk_platform.vendor \
     android.hardware.identity-V3-ndk_platform.vendor \
     android.hardware.keymaster-V3-ndk_platform.vendor \
     android.hardware.light-V1-ndk_platform.vendor \
@@ -216,6 +215,15 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor
 
 # GPS
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@2.1-impl-qti \
+    android.hardware.gnss-aidl-impl-qti \
+    android.hardware.gnss-aidl-service-qti \
+    gnss@2.0-base.policy \
+    gnss@2.0-xtra-daemon.policy \
+    gnss@2.0-xtwifi-client.policy \
+    gnss@2.0-xtwifi-inet-agent.policy
+
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml
 

@@ -1742,7 +1742,6 @@ vendor/app/CACertService/CACertService.apk
 vendor/bin/edgnss-daemon
 vendor/bin/engine-service
 vendor/bin/garden_app
-vendor/bin/hw/android.hardware.gnss-aidl-service-qti
 vendor/bin/loc_launcher
 vendor/bin/lowi-server
 vendor/bin/lowi_test
@@ -1757,21 +1756,13 @@ vendor/etc/apdr.conf
 vendor/etc/batching.conf
 vendor/etc/cacert_location.pem
 vendor/etc/gps.conf
-vendor/etc/init/android.hardware.gnss-aidl-service-qti.rc
 vendor/etc/init/init.qdmastats.rc
 vendor/etc/init/loc-launcher.rc
 vendor/etc/lowi.conf
 vendor/etc/sap.conf
-vendor/etc/seccomp_policy/gnss@2.0-base.policy
-vendor/etc/seccomp_policy/gnss@2.0-qsap-location.policy
-vendor/etc/seccomp_policy/gnss@2.0-xtra-daemon.policy
-vendor/etc/seccomp_policy/gnss@2.0-xtwifi-client.policy
-vendor/etc/seccomp_policy/gnss@2.0-xtwifi-inet-agent.policy
-vendor/etc/vintf/manifest/android.hardware.gnss-aidl-service-qti.xml
 vendor/etc/vintf/manifest/vendor.qti.gnss-service.xml
 vendor/etc/xtra_root_cert.pem
 vendor/etc/xtwifi.conf
-vendor/lib/hw/android.hardware.gnss-aidl-impl-qti.so
 vendor/lib/libMiVDR.so
 vendor/lib/libasn1cper.so
 vendor/lib/libasn1crt.so
@@ -1816,7 +1807,6 @@ vendor/lib/libxtwifi_server_protocol.so
 vendor/lib/libxtwifi_server_protocol_uri_v3.so
 vendor/lib/vendor.qti.gnss-V2-ndk.so
 vendor/lib/vendor.qti.gnss-service.so
-vendor/lib64/hw/android.hardware.gnss-aidl-impl-qti.so
 vendor/lib64/libMiVDR.so
 vendor/lib64/libasn1cper.so
 vendor/lib64/libasn1crt.so
