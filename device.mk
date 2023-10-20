@@ -49,11 +49,7 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # AIDL NDK backend
 PRODUCT_PACKAGES += \
-    android.hardware.common-V2-ndk_platform.vendor \
-    android.hardware.keymaster-V3-ndk_platform.vendor \
-    android.hardware.memtrack-V1-ndk_platform.vendor \
-    android.hardware.security.secureclock-V1-ndk_platform.vendor \
-    android.hardware.security.sharedsecret-V1-ndk_platform.vendor
+    android.hardware.common-V2-ndk.vendor
 
 # ANT+
 PRODUCT_PACKAGES += \
