@@ -447,7 +447,6 @@ vendor/lib/libcamxsettingsmanager.so
 vendor/lib/libmemunreachable.so
 vendor/lib/libmialgo_ai_vision.so
 vendor/lib/libos.so
-vendor/lib/libqshcamera.so
 vendor/lib/libquickcamera.so
 vendor/lib/libsynx.so
 vendor/lib/libthreadutils.so
@@ -2801,6 +2800,7 @@ vendor/lib64/libqdpr.so
 vendor/lib64/libqrtr.so
 vendor/lib64/libqrtrclient.so
 vendor/lib64/libqsocket.so
+vendor/lib64/libqti_vndfwk_detect_vendor.so
 vendor/lib64/librcc.so
 vendor/lib64/libril-db.so
 vendor/lib64/libril-legacy.so
