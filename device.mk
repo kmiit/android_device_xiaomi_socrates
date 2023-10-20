@@ -52,7 +52,6 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster-V3-ndk_platform.vendor \
     android.hardware.light-V1-ndk_platform.vendor \
     android.hardware.memtrack-V1-ndk_platform.vendor \
-    android.hardware.security.keymint-V1-ndk_platform.vendor \
     android.hardware.security.secureclock-V1-ndk_platform.vendor \
     android.hardware.security.sharedsecret-V1-ndk_platform.vendor
 
@@ -300,6 +299,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.hardware_keystore.xml \
     android.hardware.security.keymint-V1-ndk.vendor \
+    android.hardware.security.keymint-V2-ndk.vendor \
     android.hardware.security.rkp-V1-ndk.vendor \
     android.hardware.security.secureclock-V1-ndk.vendor \
     android.hardware.security.sharedsecret-V1-ndk.vendor
