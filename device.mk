@@ -345,6 +345,7 @@ PRODUCT_PACKAGES += \
     libstagefrighthw \
     libstagefright_codecbase \
     libstagefright_bufferpool@2.0.1.vendor \
+    libstagefright_foundation.vendor \
     libstagefright_framecapture_utils \
     libstagefright_softomx_plugin \
     libstagefright_omx.vendor
