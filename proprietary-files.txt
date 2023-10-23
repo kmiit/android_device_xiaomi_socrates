@@ -1401,23 +1401,11 @@ vendor/etc/init/vendor.qti.diag_userdebug.rc
 vendor/etc/vintf/manifest/vendor.qti.diag.hal.service.xml
 vendor/lib64/vendor.qti.diaghal@1.0.so
 
-# Display
-vendor/bin/init.qti.display_boot.sh
-vendor/etc/init/init.qti.display_boot.rc
-vendor/etc/vintf/manifest/android.hardware.graphics.mapper-impl-qti-display.xml
-vendor/lib/libdisplaydebug.so
-vendor/lib/libgpu_tonemapper.so
-vendor/lib/libgralloccore.so
-vendor/lib/libgrallocutils.so
-vendor/lib/libqservice.so
-vendor/lib64/libdisplaydebug.so
-vendor/lib64/libgpu_tonemapper.so
-vendor/lib64/libgralloccore.so
-vendor/lib64/libgrallocutils.so
-vendor/lib64/libqservice.so
+# Display (Calibration)
+odm/etc/display/qdcm_calib_data_xiaomi_42_02_0a_cmd_mode_dsc_dsi_panel.json
+odm/etc/mdss_dsi_m11_42_02_0a_dsc_cmd_mi.xml
 
-# Displayfeature
-odm/etc/df_default.xml
+# Display (Displayfeature)
 odm/etc/disp0/mdss_dsi_m11_42_02_0a_dsc_cmd/miLutInfo.txt
 odm/etc/disp0/mdss_dsi_m11_42_02_0a_dsc_cmd/miLut_0.txt
 odm/etc/disp0/mdss_dsi_m11_42_02_0a_dsc_cmd/miLut_1.txt
@@ -1444,113 +1432,70 @@ odm/etc/disp0/mdss_dsi_m11_42_02_0a_dsc_cmd/mi_gc_0.txt
 odm/etc/disp0/mdss_dsi_m11_42_02_0a_dsc_cmd/mi_gc_1.txt
 odm/etc/disp0/mdss_dsi_m11_42_02_0a_dsc_cmd/mi_gc_2.txt
 odm/etc/disp0/mdss_dsi_m11_42_02_0a_dsc_cmd/mi_gc_3.txt
-odm/lib/hw/displayfeature.default.so
-odm/lib/libMiDispDevManager.so
-odm/lib/libcolortempmode.so
-odm/lib/libdisplaycount.so
-odm/lib/libdither.so
-odm/lib/libflatmode.so
-odm/lib/libfpsmonitor.so
-odm/lib/libmiBrightness.so
-odm/lib/libmiSensorCtrl.so
-odm/lib/libmiXmlParser.so
-odm/lib/libmi_dspp.so
-odm/lib/libpaperMode.so
-odm/lib/libsdr2hdr.so
-odm/lib/libsre.so
-odm/lib/libtruetone.so
-odm/lib/libvideomode.so
+odm/etc/df_default.xml
 odm/lib64/hw/displayfeature.default.so
+odm/lib64/libMiDispDevManager.so
 odm/lib64/libcolortempmode.so
 odm/lib64/libdisplaycount.so
+odm/lib64/libdisplaylog.so
 odm/lib64/libdither.so
 odm/lib64/libflatmode.so
 odm/lib64/libfpsmonitor.so
+odm/lib64/libhdrmode.so
+odm/lib64/libhistprocess.so
 odm/lib64/libmiBrightness.so
-odm/lib64/libMiDispDevManager.so
 odm/lib64/libmiSensorCtrl.so
 odm/lib64/libmiXmlParser.so
 odm/lib64/libmi_dspp.so
 odm/lib64/libpaperMode.so
+odm/lib64/librhytheyecare.so
 odm/lib64/libsdr2hdr.so
 odm/lib64/libsre.so
 odm/lib64/libtruetone.so
 odm/lib64/libvideomode.so
-vendor/bin/displayfeature
 vendor/bin/hw/vendor.xiaomi.hardware.displayfeature@1.0-service
+vendor/bin/displayfeature
 vendor/etc/init/vendor.xiaomi.hardware.displayfeature@1.0-service.rc
 vendor/etc/vintf/manifest/vendor.xiaomi.hardware.displayfeature@1.0-service.xml
-vendor/lib/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so
-vendor/lib/libdisplayfeature.so
-vendor/lib/libdisplayfeatureservice.so
-vendor/lib/libeyecare.so
-vendor/lib/libmi-stc-HW-modulate.so
-vendor/lib/vendor.xiaomi.hardware.displayfeature@1.0.so
 vendor/lib64/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so
 vendor/lib64/libdisplayfeature.so
 vendor/lib64/libdisplayfeatureservice.so
 vendor/lib64/libeyecare.so
 vendor/lib64/libmi-stc-HW-modulate.so
-vendor/lib64/libwfddisplayconfig_vendor.so
 vendor/lib64/vendor.xiaomi.hardware.displayfeature@1.0.so
 
-# Display calibration (Socrates)
-odm/etc/display/qdcm_calib_data_xiaomi_42_02_0a_cmd_mode_dsc_dsi_panel.json
-odm/etc/mdss_dsi_m11_42_02_0a_dsc_cmd_mi.xml
-
-# Display HDR
+# Display (HDR)
 vendor/lib64/libhdr_backlight_adapter.so
+vendor/lib64/libhdr_hbm.so
 vendor/lib64/libhdr_tm.so
+vendor/lib64/libhdrdynamic.so
+vendor/lib64/libhdrdynamicootf.so
+vendor/lib64/libhdrvivid.so
+vendor/lib64/libpichdralgo.so
 
-# Display HWC
-vendor/bin/hw/vendor.qti.hardware.display.composer-service
+# Display (HWC)
 vendor/bin/qdcmss
 vendor/etc/init/qdcmss.rc
 vendor/etc/snapdragon_color_libs_config.xml
-vendor/lib/libbacklight-calib.so
-vendor/lib/libdigital-dimming.so
-vendor/lib/libdisplayconfig.qti.so
-vendor/lib/libdpps.so
-vendor/lib/libmemutils.so
-vendor/lib/libqdcm-algo.so
-vendor/lib/libqdcm-json-mode-parser.so
-vendor/lib/libqdcm-mode-parser.so
-vendor/lib/libqdutils.so
-vendor/lib/libsdmcore.so
-vendor/lib/libsdmutils.so
-vendor/lib/libsnapdragoncolor-manager.so
-vendor/lib/libsnapdragoncolor-qdcm.so
-vendor/lib/vendor.qti.hardware.qdutils_disp@1.0.so
 vendor/lib64/libbacklight-calib.so
 vendor/lib64/libdigital-dimming.so
 vendor/lib64/libdisplayconfig.qti.so
 vendor/lib64/libdpps.so
+vendor/lib64/libgame_enhance.so
 vendor/lib64/libhistogram.so
 vendor/lib64/libmemutils.so
 vendor/lib64/libqdcm-algo.so
 vendor/lib64/libqdcm-json-mode-parser.so
 vendor/lib64/libqdcm-mode-parser.so
 vendor/lib64/libqdutils.so
-vendor/lib64/libsdmcore.so
-vendor/lib64/libsdmutils.so
 vendor/lib64/libsnapdragoncolor-manager.so
 vendor/lib64/libsnapdragoncolor-qdcm.so
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
 
-# Display postprocessing
+# Display (Postprocessing)
 vendor/bin/hw/vendor.display.color@1.0-service
 vendor/bin/ppd
 vendor/etc/init/vendor.display.color@1.0-service.rc
-vendor/lib/libdisp-aba.so
-vendor/lib/vendor.display.color@1.0.so
-vendor/lib/vendor.display.color@1.1.so
-vendor/lib/vendor.display.color@1.2.so
-vendor/lib/vendor.display.color@1.3.so
-vendor/lib/vendor.display.color@1.4.so
-vendor/lib/vendor.display.color@1.5.so
-vendor/lib/vendor.display.color@1.6.so
-vendor/lib/vendor.display.color@1.7.so
-vendor/lib/vendor.display.postproc@1.0.so
 vendor/lib64/libdisp-aba.so
 vendor/lib64/vendor.display.color@1.0.so
 vendor/lib64/vendor.display.color@1.1.so
@@ -1562,7 +1507,7 @@ vendor/lib64/vendor.display.color@1.6.so
 vendor/lib64/vendor.display.color@1.7.so
 vendor/lib64/vendor.display.postproc@1.0.so
 
-# Display SDM
+# Display (SDM)
 vendor/etc/display/DPU660.xml
 vendor/etc/display/DPU670.xml
 vendor/etc/display/DPU720.xml
@@ -1572,25 +1517,13 @@ vendor/etc/display/DPU8__.xml
 vendor/etc/display/DPU9__.xml
 vendor/etc/display/advanced_sf_offsets.xml
 vendor/etc/display/thermallevel_to_fps.xml
-vendor/lib/libclstc_algorithm_adapter.so
-vendor/lib/libclstc_gcp_adapter.so
-vendor/lib/libclstc_tm.so
-vendor/lib/libdisplayqos.so
-vendor/lib/libdisplayskuutils.so
-vendor/lib/libqseed3.so
-vendor/lib/librcmask.so
-vendor/lib/libsdedrm.so
-vendor/lib/libsdm-color.so
-vendor/lib/libsdm-colormgr-algo.so
-vendor/lib/libsdm-disp-vndapis.so
-vendor/lib/libsdmextension.so
-vendor/lib/libtestutils.so
-vendor/lib/libtinyxml2_1.so
+vendor/etc/clstc_config_library.xml
 vendor/lib64/libclstc_algorithm_adapter.so
 vendor/lib64/libclstc_gcp_adapter.so
 vendor/lib64/libclstc_tm.so
 vendor/lib64/libdisplayqos.so
 vendor/lib64/libdisplayskuutils.so
+vendor/lib64/libintervmipc.so
 vendor/lib64/libqseed3.so
 vendor/lib64/librcmask.so
 vendor/lib64/libsdedrm.so
@@ -1600,6 +1533,7 @@ vendor/lib64/libsdm-disp-vndapis.so
 vendor/lib64/libsdmextension.so
 vendor/lib64/libtestutils.so
 vendor/lib64/libtinyxml2_1.so
+vendor/lib64/libvmfilexfer.so
 
 # DPM
 system_ext/bin/dpmd
