@@ -27,14 +27,7 @@ BOARD_API_LEVEL := 33
 BOARD_SHIPPING_API_LEVEL := 31
 PRODUCT_SHIPPING_API_LEVEL := 31
 
-
-###
-# libhdradaptivecustom
-
-
-
-
-
+# WITH_GMS=true
 
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
@@ -56,7 +49,6 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # AIDL NDK backend
 PRODUCT_PACKAGES += \
     android.hardware.common-V2-ndk.vendor \
-    android.hardware.gnss-V2-ndk.vendor \
     android.hardware.identity-V4-ndk.vendor \
     android.hardware.light-V2-ndk.vendor
 
@@ -192,6 +184,23 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.capabilityconfigstore@1.0.vendor
 
+# Display
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.allocator@3.0-impl \
+    android.hardware.graphics.allocator@4.0-impl \
+    android.hardware.graphics.mapper@4.0-impl-qti-display \
+    init.qti.display_boot.rc \
+    init.qti.display_boot.sh \
+    gralloc.default \
+    libgpu_tonemapper \
+    libqservice \
+    libsdmcore \
+    libsdmdal \
+    libsdmutils \
+    libtinyxml2 \
+    vendor.qti.hardware.display.composer-service \
+    vendor.qti.hardware.display.composer@3.0.vendor
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3.vendor \
@@ -231,14 +240,13 @@ PRODUCT_COPY_FILES += \
 
 # Graphics
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.mapper@4.0-impl-qti-display \
-    libgralloc.qti \
     libgui_vendor \
     libqdMetaData \
-    vendor.display.config@1.1 \
     vendor.display.config@1.11.vendor \
     vendor.display.config@2.0 \
     vendor.display.config@2.0.vendor \
+    vendor.qti.hardware.display.allocator@3.0.vendor \
+    vendor.qti.hardware.display.allocator@4.0.vendor \
     vendor.qti.hardware.display.allocator-service \
     vendor.qti.hardware.display.config \
     vendor.qti.hardware.display.config-V1-ndk.vendor \
@@ -253,6 +261,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@2.0.vendor \
     vendor.qti.hardware.display.mapper@3.0.vendor \
     vendor.qti.hardware.display.mapper@4.0.vendor \
+    vendor.qti.hardware.display.mapperextensions@1.1.vendor \
+    vendor.qti.hardware.display.mapperextensions@1.2.vendor \
     vendor.qti.hardware.display.mapperextensions@1.3.vendor
 
 PRODUCT_COPY_FILES += \
@@ -266,8 +276,8 @@ PRODUCT_COPY_FILES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health-service.socrates \
-    android.hardware.health-service.socrates_recovery \
+    android.hardware.health-service.xiaomi \
+    android.hardware.health-service.xiaomi_recovery \
     android.hardware.health@1.0.vendor \
     android.hardware.health@2.1.vendor
 
@@ -306,9 +316,17 @@ PRODUCT_PACKAGES += \
 
 # Keymint
 PRODUCT_PACKAGES += \
+    android.hardware.security.keymint-service \
+    android.hardware.security.keymint-V1-cpp \
+    android.hardware.security.keymint-V1-cpp.vendor \
+    android.hardware.security.keymint-V1-ndk \
     android.hardware.security.keymint-V1-ndk.vendor \
+    android.hardware.security.keymint-V2-cpp \
+    android.hardware.security.keymint-V2-cpp.vendpr \
+    android.hardware.security.keymint-V2-ndk \
     android.hardware.security.keymint-V2-ndk.vendor \
     android.hardware.security.rkp-V1-ndk.vendor \
+    android.hardware.security.secureclock-V1-cpp \
     android.hardware.security.secureclock-V1-ndk.vendor \
     android.hardware.security.sharedsecret-V1-ndk.vendor
 
@@ -320,7 +338,7 @@ PRODUCT_PACKAGES += \
     android.hardware.media.c2@1.0.vendor \
     android.hardware.media.c2@1.1.vendor \
     android.hardware.media.c2@1.2.vendor \
-    android.hardware.media.omx@1.0-service \
+    android.hardware.media.omx@1.0-service.vendor \
     android.hardware.media.omx@1.0 \
     libavservices_minijail \
     libavservices_minijail_vendor \
@@ -332,12 +350,11 @@ PRODUCT_PACKAGES += \
     libcodec2_vndk.vendor \
     libmedia_codeclist \
     libsfplugin_ccodec_utils.vendor \
-    libstagefrighthw \
+    libstagefrighthw.vendor \
     libstagefright_codecbase \
     libstagefright_bufferpool@2.0.1.vendor \
-    libstagefright_foundation.vendor \
     libstagefright_framecapture_utils \
-    libstagefright_softomx_plugin \
+    libstagefright_softomx_plugin.vendor \
     libstagefright_omx.vendor
 
 PRODUCT_PACKAGES += \
@@ -409,6 +426,12 @@ include $(LOCAL_PATH)/properties/default.mk
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@2.3.vendor \
     vendor.qti.hardware.perf@2.3
+    
+# GPS
+PRODUCT_PACKAGES += \
+    android.hardware.gnss-V4-ndk.vendor \
+    android.hardware.gnss@2.1.vendor \
+    android.hardware.gnss-aidl-service-qti
 
 # Power
 PRODUCT_PACKAGES += \
@@ -421,7 +444,8 @@ PRODUCT_COPY_FILES += \
 
 # Protobuf
 PRODUCT_PACKAGES += \
-    libprotobuf-cpp-full-3.9.1-vendorcompat
+    libprotobuf-cpp-full-3.9.1-vendorcompat \
+    libprotobuf-cpp-lite-3.9.1-vendorcompat
 
 # QTI
 PRODUCT_PACKAGES += \
@@ -436,23 +460,27 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
+    android.hardware.radio@1.6.vendor \
     android.hardware.radio-V1-ndk.vendor \
-    android.hardware.radio.config-V1-ndk.vendor \
-    android.hardware.radio.sim-V1-ndk.vendor \
     android.hardware.radio.config@1.3.vendor \
+    android.hardware.radio.config-V1-ndk.vendor \
     android.hardware.radio.deprecated@1.0.vendor \
     android.hardware.radio.messaging-V1-ndk.vendor \
     android.hardware.radio.modem-V1-ndk.vendor \
     android.hardware.radio.network-V1-ndk.vendor \
+    android.hardware.radio.sim-V1-ndk.vendor \
     android.hardware.radio.voice-V1-ndk.vendor \
-    android.hardware.radio@1.6.vendor \
     libprotobuf-cpp-full \
-    librmnetctl 
+    librmnetctl \
+    android.hardware.wifi.supplicant-V1-ndk.vendor
+
+PRODUCT_PACKAGES += \
+    android.frameworks.stats@1.0 \
+    android.frameworks.stats@1.0.vendor
 
 PRODUCT_PACKAGES += \
     ims \
     QtiTelephony \
-    qti-telephony-common
 
 # Rootdir
 PRODUCT_PACKAGES += \
@@ -599,11 +627,3 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.rtt.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.rtt.xml \
     frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml \
     frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml
-
-# WiFi Display
-PRODUCT_PACKAGES += \
-    libnl \
-    libwfdaac_vendor
-
-PRODUCT_BOOT_JARS += \
-    WfdCommon
