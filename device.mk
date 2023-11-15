@@ -163,8 +163,11 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    android.hardware.camera.common@1.0.vendor \
     android.hardware.camera.common-V1-ndk.vendor \
     android.hardware.camera.device-V1-ndk.vendor \
+    android.hardware.common.fmq-V1-ndk.vendor \
+    android.hardware.camera.metadata-V1-ndk.vendor \
     android.hardware.camera.provider-V1-ndk.vendor \
     android.hardware.camera.provider@2.7.vendor \
     camera.device@1.0-impl \
@@ -283,6 +286,7 @@ PRODUCT_PACKAGES += \
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.allocator@1.0.vendor \
+    android.hidl.memory@1.0.vendor \
     android.hidl.memory.block@1.0.vendor \
     libhidltransport.vendor \
     libhwbinder.vendor
@@ -317,9 +321,9 @@ PRODUCT_PACKAGES += \
 # Keymint
 PRODUCT_PACKAGES += \
     android.hardware.security.keymint-service \
-    android.hardware.security.keymint-V1-ndk\
     android.hardware.security.keymint-V1-ndk.vendor \
     android.hardware.security.keymint-V2-ndk.vendor \
+    android.hardware.security.rkp-V1-ndk.vendor \
     android.hardware.security.secureclock-V1-ndk \
     android.hardware.security.sharedsecret-V1-ndk \
 
