@@ -1818,7 +1818,6 @@ vendor/lib64/libqtikeymaster4.so
 vendor/bin/hw/android.hardware.security.keymint-service-qti
 vendor/etc/init/android.hardware.security.keymint-service-qti.rc
 vendor/etc/permissions/android.hardware.hardware_keystore.xml
-vendor/etc/vintf/manifest/android.hardware.security.keymint-service-qti.xml
 vendor/lib64/libqtikeymint.so
 
 # Limits
@@ -3382,7 +3381,6 @@ vendor/lib/libqti-qesdk-secure.so
 vendor/lib/librecovery_updater.so
 vendor/lib/librecovery_updater_msm.so
 vendor/lib/libsamplefilterplugin.so
-vendor/lib/libsdmdal.so
 vendor/lib/libsecureui_svcsock.so
 vendor/lib/libsensor_calibration.so
 vendor/lib/libsmemlog.so
@@ -3476,7 +3474,6 @@ vendor/lib64/librecovery_updater.so
 vendor/lib64/librecovery_updater_msm.so
 vendor/lib64/libreffeature.so
 vendor/lib64/libsamplefilterplugin.so
-vendor/lib64/libsdmdal.so
 vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libsmemlog.so
 vendor/lib64/libspatializerparamstorage.so
