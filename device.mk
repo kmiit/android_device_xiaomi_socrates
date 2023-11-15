@@ -49,7 +49,6 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # AIDL NDK backend
 PRODUCT_PACKAGES += \
     android.hardware.common-V2-ndk.vendor \
-    android.hardware.identity-V4-ndk.vendor \
     android.hardware.light-V2-ndk.vendor
 
 # ANT+
@@ -311,24 +310,19 @@ PRODUCT_COPY_FILES += \
 
 # Keymaster
 PRODUCT_PACKAGES += \
+    android.hardware.identity-V4-ndk.vendor \
     android.hardware.keymaster@4.1.vendor \
     libkeymaster_messages.vendor
 
 # Keymint
 PRODUCT_PACKAGES += \
     android.hardware.security.keymint-service \
-    android.hardware.security.keymint-V1-cpp \
-    android.hardware.security.keymint-V1-cpp.vendor \
-    android.hardware.security.keymint-V1-ndk \
+    android.hardware.security.keymint-V1-ndk\
     android.hardware.security.keymint-V1-ndk.vendor \
-    android.hardware.security.keymint-V2-cpp \
-    android.hardware.security.keymint-V2-cpp.vendpr \
-    android.hardware.security.keymint-V2-ndk \
     android.hardware.security.keymint-V2-ndk.vendor \
-    android.hardware.security.rkp-V1-ndk.vendor \
-    android.hardware.security.secureclock-V1-cpp \
-    android.hardware.security.secureclock-V1-ndk.vendor \
-    android.hardware.security.sharedsecret-V1-ndk.vendor
+    android.hardware.security.secureclock-V1-ndk \
+    android.hardware.security.sharedsecret-V1-ndk \
+
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.device_id_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.device_id_attestation.xml
@@ -429,7 +423,7 @@ PRODUCT_PACKAGES += \
     
 # GPS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss-V4-ndk.vendor \
+    android.hardware.gnss-V2-ndk.vendor \
     android.hardware.gnss@2.1.vendor \
     android.hardware.gnss-aidl-service-qti
 
@@ -461,9 +455,10 @@ PRODUCT_PACKAGES += \
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.6.vendor \
-    android.hardware.radio-V1-ndk.vendor \
-    android.hardware.radio.config@1.3.vendor \
+    android.hardware.radio-V2-ndk.vendor \
+    android.hardware.radio.config@1.0.vendor \
     android.hardware.radio.config-V1-ndk.vendor \
+    android.hardware.radio.data-V2-ndk.vendor \
     android.hardware.radio.deprecated@1.0.vendor \
     android.hardware.radio.messaging-V1-ndk.vendor \
     android.hardware.radio.modem-V1-ndk.vendor \

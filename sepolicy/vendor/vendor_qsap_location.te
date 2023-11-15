@@ -1,2 +1,2 @@
 allow vendor_qsap_location vendor_location_data_file:dir { search };
-userdebug_or_eng(`allow vendor_dcfd vendor_sensors_debug_prop:file { read }');
+# userdebug_or_eng(`allow vendor_dcfd vendor_sensors_debug_prop:file { read }');
