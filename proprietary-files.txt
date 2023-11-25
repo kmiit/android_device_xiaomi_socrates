@@ -2060,6 +2060,7 @@ vendor/lib64/libcodec2_soft_ddpdec.so
 vendor/lib64/libcodec2_store_dolby.so
 vendor/lib64/libdeccfg.so
 vendor/lib64/libdolbyottcameracontrol.so
+vendor/lib64/libEncoderProcessor.so
 
 # Memtrack
 vendor/bin/hw/vendor.qti.hardware.memtrack-service
@@ -3826,3 +3827,4 @@ odm/lib64/librhytheyecare.so
 vendor/lib64/libDecoderProcessor.so
 
 
+vendor/lib64/libeglcore.so

@@ -134,7 +134,7 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.1.vendor \
     android.hardware.bluetooth.audio-impl \
     android.hardware.bluetooth.audio-V2-ndk.vendor \
-    android.hardware.bluetooth.audio@2.0-impl \
+    android.hardware.bluetooth.audio@2.2-impl \
     libbluetooth_audio_session \
     vendor.qti.hardware.bluetooth.audio-V1-ndk.vendor \
     vendor.qti.hardware.bluetooth.audio-V2-ndk.vendor \
@@ -335,6 +335,7 @@ PRODUCT_PACKAGES += \
     libsfplugin_ccodec_utils.vendor \
     libstagefright_foundation.vendor \
     libstagefright_omx.vendor \
+    libsfplugin_ccodec_utils.vendor \
     libpalclient
 
 PRODUCT_PACKAGES += \
