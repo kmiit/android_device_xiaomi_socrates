@@ -2,7 +2,7 @@
 #==============================================================================
 #       init.qti.media.sh
 #
-# Copyright (c) 2020-2022, Qualcomm Technologies, Inc.
+# Copyright (c) 2020-2023, Qualcomm Technologies, Inc.
 # All Rights Reserved.
 # Confidential and Proprietary - Qualcomm Technologies, Inc.
 #
@@ -44,6 +44,16 @@ fi
 
 target=`getprop ro.board.platform`
 case "$target" in
+    "crow")
+        setprop vendor.media.target_variant "_crow_v0"
+        setprop vendor.netflix.bsp_rev ""
+        sku_ver=`cat /sys/devices/platform/soc/aa00000.qcom,vidc/sku_version` 2> /dev/null
+        if [ $sku_ver -eq 1 ]; then
+            setprop vendor.media.target_variant "_crow_v1"
+        elif [ $sku_ver -eq 2 ]; then
+            setprop vendor.media.target_variant "_crow_v2"
+        fi
+        ;;
     "anorak")
         setprop vendor.mm.target.enable.qcom_parser 0
         setprop vendor.media.target_variant "_anorak"
@@ -51,7 +61,7 @@ case "$target" in
     "kalama")
         setprop vendor.mm.target.enable.qcom_parser 4112471
         setprop vendor.media.target_variant "_kalama"
-        if [ $build_codename -le "13" ]; then
+        if [ $build_codename -le "14" ]; then
             setprop vendor.netflix.bsp_rev "Q8550-36432-1"
         fi
         ;;
