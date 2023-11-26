@@ -21,6 +21,7 @@ PRODUCT_BRAND := Redmi
 PRODUCT_MANUFACTURER := Xiaomi
 
 # GMS
+WITH_GMS := false
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 # Derp

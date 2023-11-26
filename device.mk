@@ -484,7 +484,6 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.frameworks.sensorservice@1.0 \
     android.frameworks.sensorservice@1.0.vendor \
     android.hardware.sensors@2.1-service.xiaomi-multihal \
     libsensorndkbridge \
@@ -589,7 +588,7 @@ PRODUCT_COPY_FILES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi \
+    android.hardware.wifi-service \
     android.hardware.wifi.hostapd@1.0.vendor \
     hostapd \
     hostapd_cli \
