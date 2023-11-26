@@ -1473,11 +1473,13 @@ vendor/etc/init/init.qti.display_boot.rc
 vendor/etc/vintf/manifest/vendor.qti.hardware.display.allocator-service.xml
 vendor/lib64/libDecoderProcessor.so
 vendor/etc/vintf/manifest/android.hardware.graphics.mapper-impl-qti-display.xml
+vendor/lib/hw/android.hardware.graphics.mapper@4.0-impl-qti-display.so
 vendor/lib/libdisplaydebug.so
 vendor/lib/libgpu_tonemapper.so
 vendor/lib/libgralloccore.so
 vendor/lib/libgrallocutils.so
 vendor/lib/libqservice.so
+vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-qti-display.so
 vendor/lib64/libdisplaydebug.so
 vendor/lib64/libgpu_tonemapper.so
 vendor/lib64/libgralloccore.so
@@ -3826,6 +3828,7 @@ odm/lib64/libcom.xiaomi.algomsg.so
 odm/lib64/libhistprocess.so
 odm/lib64/librhytheyecare.so
 vendor/lib64/libDecoderProcessor.so
-
-
 vendor/lib64/libeglcore.so
+
+vendor/lib64/libfcsam.so
+vendor/lib64/libmiam.so
